@@ -95,6 +95,7 @@ img {
 }
 .statement {
   max-width: 700px;
+  margin: 120px auto;
 }
 
 .statement h1 {
