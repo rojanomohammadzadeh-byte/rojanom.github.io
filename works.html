@@ -1,71 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<head>
   <meta charset="UTF-8">
   <title>Selected Works</title>
 
-  <style>
-    body {
-      margin: 0;
-font-family: 'Inter', sans-serif;
-      background: white;
-      color: black;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 100px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      font-weight: 300;
-      margin-bottom: 60px;
-    }
-
-    .work {
-      margin-bottom: 100px;
-    }
-
-    .work img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    .title {
-      font-size: 20px;
-      font-weight: 300;
-      margin-bottom: 5px;
-    }
-
-    .info {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.5;
-    }
-
-    .nav {
-      margin-top: 80px;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: black;
-      font-size: 14px;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
+<body>
+
+<!-- NAVIGATION -->
 <div style="position:fixed; top:20px; left:20px; font-size:13px;">
   <a href="index.html">Home</a> /
-  <a href="works.html">Works</a>
+  <a href="works.html">Works</a> /
+  <a href="statement.html">Statement</a> /
+  <a href="cv.html">CV</a> /
+  <a href="contact.html">Contact</a>
 </div>
-<body>
 
 <div class="container">
 
@@ -73,28 +25,38 @@ font-family: 'Inter', sans-serif;
 
   <!-- WORK 1 -->
   <div class="work">
+
     <img src="transplantation1.jpg" alt="work1">
-<a href="transplantation.html">Transplantation Series I</a>
+
+    <div class="title">
+      <a href="transplantation.html">Transplantation Series I</a>
+    </div>
+
     <div class="info">
       2025<br>
       Mixed media installation<br>
       Variable dimensions
     </div>
+
   </div>
 
   <!-- WORK 2 -->
   <div class="work">
+
     <img src="sugar_sculpture.jpg" alt="work2">
+
     <div class="title">Feast and Fight</div>
+
     <div class="info">
       2026<br>
       Sugar, glue, mixed materials<br>
       120 × 60 × 60 cm
     </div>
+
   </div>
 
-  <!-- NAV -->
-  <div class="nav">
+  <!-- BACK -->
+  <div style="margin-top:80px;">
     <a href="index.html">← Back</a>
   </div>
 
