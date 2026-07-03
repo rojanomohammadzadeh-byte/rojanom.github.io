@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Rojano Mohammadzadeh</title>
+
   <style>
     body {
       margin: 0;
@@ -11,53 +12,64 @@
       color: black;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 80px auto;
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       padding: 20px;
     }
 
+    .hero img {
+      max-width: 70%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
     h1 {
-      font-size: 40px;
       font-weight: 300;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
-    h2 {
-      font-size: 18px;
-      font-weight: 300;
-      margin-bottom: 40px;
+    p {
+      font-size: 14px;
+      color: #333;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
 
-    .menu a {
-      display: block;
-      margin: 10px 0;
+    a {
       text-decoration: none;
       color: black;
-      font-size: 18px;
+      font-size: 14px;
+      border-bottom: 1px solid black;
     }
 
-    .menu a:hover {
-      text-decoration: underline;
+    a:hover {
+      opacity: 0.6;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Rojano Mohammadzadeh</h1>
-    <h2>Artist | Sculpture | Installation | Research-based Practice</h2>
 
-    <div class="menu">
-<a href="works.html">Works</a>
-<a href="statement.html">Artist Statement</a>
-<a href="cv.html">CV</a>
-<a href="contact.html">Contact</a>
-      <a href="#">Research</a>
-      <a href="#">CV</a>
-      <a href="#">Artist Statement</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
+<div class="hero">
+
+  <img src="transplantation1.jpg" alt="featured work">
+
+  <h1>Rojano Mohammadzadeh</h1>
+
+  <p>
+    Artist working with sculpture, installation, and material-based research on migration, liminality, and transformation.
+  </p>
+
+  <a href="works.html">Enter Selected Works</a>
+
+</div>
+
 </body>
 </html>
