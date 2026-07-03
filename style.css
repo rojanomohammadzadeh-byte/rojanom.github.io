@@ -31,3 +31,22 @@ img {
   display: block;
   margin-bottom: 20px;
 }
+.top-nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 13px;
+  z-index: 999;
+}
+
+.top-nav a {
+  margin-right: 12px;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.top-nav a:hover {
+  opacity: 0.5;
+}
