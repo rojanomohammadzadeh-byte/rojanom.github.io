@@ -11,49 +11,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
-<!-- NAV -->
 <header class="nav">
-
   <nav class="nav-right">
-        <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="works.html">Works</a>
     <a href="statement.html">Statement</a>
     <a href="cv.html">CV</a>
     <a href="contact.html">Contact</a>
   </nav>
-
 </header>
 
-<section class="works-page">
+<main class="works-page">
 
-  <h1 class="page-title">Selected Works</h1>
+    <aside class="years">
 
-  <!-- YEARS (INLINE, NOT SIDEBAR) -->
-  <div class="years-inline">
-    <span class="year active" onclick="showYear('2026', event)">2026</span>
-    <span class="year" onclick="showYear('2025', event)">2025</span>
-  </div>
+        <div class="year active"
+             onclick="showYear('2026',event)">
+            2026
+        </div>
+
+        <div class="year"
+             onclick="showYear('2025',event)">
+            2025
+        </div>
+
+    </aside>
 
 
-  <!-- WORKS -->
-  <div class="works-container">
+    <section class="works-content">
 
-    <div class="year-group active" id="2026">
-      <a href="#" class="work-item">
-        <img src="sugar_sculpture.jpg">
-        <span>Feast and Fight</span>
-      </a>
-    </div>
+        <div class="year-group active" id="2026">
 
-    <div class="year-group" id="2025">
-      <a href="transplantation.html" class="work-item">
-        <img src="transplantation1.jpg">
-        <span>Transplantation Series I</span>
-      </a>
-    </div>
+            <a href="#" class="work">
+                <img src="sugar_sculpture.jpg" alt="">
+                <h2>Feast and Fight</h2>
+            </a>
 
-  </div>
+        </div>
 
-</section>
+
+        <div class="year-group" id="2025">
+
+            <a href="transplantation.html" class="work">
+                <img src="transplantation1.jpg" alt="">
+                <h2>Transplantation Series I</h2>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
