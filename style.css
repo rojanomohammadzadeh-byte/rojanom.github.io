@@ -1,37 +1,32 @@
-/* =========================
+/* ==============================
    WORKS
-========================= */
+============================== */
 
 .works-page{
 
     max-width:1300px;
 
-    margin:0 auto;
+    margin:auto;
 
-    padding:
-
-        170px
-        70px
-        100px;
+    padding:170px 70px 120px;
 
     display:grid;
 
-    grid-template-columns:
-
-        140px
-        1fr;
+    grid-template-columns:140px 1fr;
 
     column-gap:90px;
 
-    align-items:start;
 }
 
-/* LEFT */
+/* YEARS */
 
 .years{
 
     position:sticky;
+
     top:150px;
+
+    height:fit-content;
 
 }
 
@@ -47,7 +42,8 @@
 
     opacity:.35;
 
-    transition:.25s;
+    transition:.3s;
+
 }
 
 .year:hover{
@@ -62,14 +58,7 @@
 
 }
 
-
-/* RIGHT */
-
-.works-content{
-
-    width:100%;
-
-}
+/* PROJECTS */
 
 .year-group{
 
@@ -83,19 +72,19 @@
 
 }
 
-.work{
+.project{
 
     display:block;
 
-    color:#111;
-
     text-decoration:none;
 
-    margin-bottom:90px;
+    color:#111;
+
+    margin-bottom:110px;
 
 }
 
-.work img{
+.project img{
 
     width:100%;
 
@@ -103,30 +92,32 @@
 
     display:block;
 
-    transition:.45s;
-}
-
-.work:hover img{
-
-    opacity:.9;
+    transition:.5s;
 
 }
 
-.work h2{
+.project:hover img{
+
+    opacity:.92;
+
+}
+
+.project h2{
+
+    margin-top:18px;
 
     font-size:16px;
 
     font-weight:300;
 
-    margin-top:18px;
 }
-@media (max-width:900px){
+@media(max-width:900px){
 
 .works-page{
 
     grid-template-columns:1fr;
 
-    padding:120px 20px 60px;
+    padding:120px 20px 70px;
 
 }
 
@@ -144,7 +135,7 @@
 
 }
 
-.work img{
+.project img{
 
     max-width:100%;
 
