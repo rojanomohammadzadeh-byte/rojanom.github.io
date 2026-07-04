@@ -13,15 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+function showYear(year,event){
 
-function showYear(year, event) {
-  const groups = document.querySelectorAll('.year-group');
-  const years = document.querySelectorAll('.year');
+    document.querySelectorAll(".year-group")
+    .forEach(group=>group.classList.remove("active"));
 
-  groups.forEach(g => g.classList.remove('active'));
-  years.forEach(y => y.classList.remove('active'));
+    document.querySelectorAll(".year")
+    .forEach(year=>year.classList.remove("active"));
 
-  document.getElementById(year).classList.add('active');
-  event.target.classList.add('active');
-}
+    document.getElementById(year)
+    .classList.add("active");
+
+    event.target.classList.add("active");
+
 }
