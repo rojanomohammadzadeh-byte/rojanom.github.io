@@ -296,3 +296,56 @@ footer{
 }
 
 }
+/* ---------------- CV PAGE ---------------- */
+
+.cv-page{
+  padding:140px 70px;
+}
+
+.cv-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  max-width:1100px;
+}
+
+/* TITLE */
+.page-title{
+  font-size:42px;
+  font-weight:300;
+  margin-bottom:70px;
+}
+
+/* BLOCKS */
+.cv-block h3{
+  font-size:14px;
+  font-weight:400;
+  margin-bottom:12px;
+  letter-spacing:0.4px;
+}
+
+.cv-block p{
+  font-size:15px;
+  line-height:1.8;
+  color:#444;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:900px){
+
+.cv-page{
+  padding:120px 20px;
+}
+
+.cv-grid{
+  grid-template-columns:1fr;
+  gap:50px;
+}
+
+.page-title{
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+}
