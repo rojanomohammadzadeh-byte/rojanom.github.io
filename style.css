@@ -287,12 +287,27 @@ footer{
     padding:120px 20px;
   }
 
-  .years{
-    flex-direction:row;
-    width:100%;
-    position:relative;
-    top:0;
-    gap:25px;
+  .year{
+  font-size:14px;
+  font-weight:300;
+  letter-spacing:1px;
+
+  cursor:pointer;
+  color:#111;
+
+  opacity:0.4;
+  transition:0.3s ease;
+
+  margin-bottom:18px;
+}
+
+.year:hover{
+  opacity:1;
+}
+
+.year.active{
+  opacity:1;
+}
   }
 
   .works-panel{
