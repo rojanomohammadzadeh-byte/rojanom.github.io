@@ -1,4 +1,4 @@
- /* ---------------- RESET ---------------- */
+/* ---------------- RESET ---------------- */
 
 *{
   margin:0;
@@ -111,7 +111,7 @@ footer{
 }
 
 /* =========================================================
-   WORKS (NEW WENDY-STYLE YEAR ARCHIVE SYSTEM)
+   WORKS (YEAR ARCHIVE SYSTEM)
 ========================================================= */
 
 .works-layout{
@@ -131,17 +131,15 @@ footer{
   top:160px;
 }
 
+/* YEAR TEXT (NOT BUTTON STYLE) */
 .year{
-  background:none;
-  border:none;
-  text-align:left;
-
   font-size:14px;
   font-weight:300;
   letter-spacing:1px;
 
   cursor:pointer;
   color:#111;
+
   opacity:0.4;
   transition:0.3s ease;
 }
@@ -287,27 +285,12 @@ footer{
     padding:120px 20px;
   }
 
-  .year{
-  font-size:14px;
-  font-weight:300;
-  letter-spacing:1px;
-
-  cursor:pointer;
-  color:#111;
-
-  opacity:0.4;
-  transition:0.3s ease;
-
-  margin-bottom:18px;
-}
-
-.year:hover{
-  opacity:1;
-}
-
-.year.active{
-  opacity:1;
-}
+  .years{
+    flex-direction:row;
+    width:100%;
+    position:relative;
+    top:0;
+    gap:25px;
   }
 
   .works-panel{
