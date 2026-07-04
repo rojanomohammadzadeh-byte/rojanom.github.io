@@ -9,3 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     hero.style.transform = "translateY(0)";
   }, 200);
 });
+<script>
+function showYear(year){
+  const groups = document.querySelectorAll('.year-group');
+  const buttons = document.querySelectorAll('.year');
+
+  groups.forEach(g => g.classList.remove('active'));
+  buttons.forEach(b => b.classList.remove('active'));
+
+  document.getElementById(year).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
