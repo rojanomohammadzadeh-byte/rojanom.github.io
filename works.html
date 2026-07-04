@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Selected Works</title>
 
   <link rel="stylesheet" href="style.css">
@@ -10,33 +13,41 @@
 
 <body>
 
-<!-- NAVIGATION -->
-<div class="top-nav">
-  <a href="index.html">Home</a>
-  <a href="works.html">Works</a>
-  <a href="statement.html">Statement</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
-</div>
+<!-- NAV (same as homepage) -->
+<header class="nav">
 
-<!-- MAIN CONTAINER -->
-<div class="container">
+  <a class="logo" href="index.html">Rojano Mohammadzadeh</a>
 
-  <h1>Selected Works</h1>
+  <nav class="nav-right">
+    <a href="works.html">Works</a>
+    <a href="statement.html">Statement</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- WORKS -->
+<section class="works">
+
+  <h1 class="page-title">Selected Works</h1>
 
   <!-- WORK 1 -->
   <div class="work">
 
-    <img src="transplantation1.jpg" alt="work1">
+    <img src="transplantation1.jpg" alt="Transplantation Series">
 
-    <div class="title">
-      <a href="transplantation.html">Transplantation Series I</a>
-    </div>
+    <div class="work-text">
+      <a href="transplantation.html" class="work-title">
+        Transplantation Series I
+      </a>
 
-    <div class="info">
-      2025<br>
-      Mixed media installation<br>
-      Variable dimensions
+      <p class="work-info">
+        2025<br>
+        Mixed media installation<br>
+        Variable dimensions
+      </p>
     </div>
 
   </div>
@@ -44,24 +55,21 @@
   <!-- WORK 2 -->
   <div class="work">
 
-    <img src="sugar_sculpture.jpg" alt="work2">
+    <img src="sugar_sculpture.jpg" alt="Feast and Fight">
 
-    <div class="title">Feast and Fight</div>
+    <div class="work-text">
+      <div class="work-title">Feast and Fight</div>
 
-    <div class="info">
-      2026<br>
-      Sugar, glue, mixed materials<br>
-      120 × 60 × 60 cm
+      <p class="work-info">
+        2026<br>
+        Sugar, glue, mixed materials<br>
+        120 × 60 × 60 cm
+      </p>
     </div>
 
   </div>
 
-  <!-- BACK -->
-  <div style="margin-top:80px;">
-    <a href="index.html">← Back</a>
-  </div>
-
-</div>
+</section>
 
 </body>
 </html>
