@@ -1,4 +1,5 @@
-/* RESET */
+ /* ---------------- RESET ---------------- */
+
 *{
   margin:0;
   padding:0;
@@ -13,7 +14,8 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* NAV */
+/* ---------------- NAV ---------------- */
+
 .nav{
   position:fixed;
   top:0;
@@ -25,7 +27,6 @@ body{
   align-items:center;
 
   padding:50px 70px;
-
   z-index:100;
 }
 
@@ -35,7 +36,6 @@ body{
   font-size:13px;
   font-weight:300;
   letter-spacing:0.5px;
-
   transition:0.3s ease;
 }
 
@@ -48,13 +48,12 @@ body{
   gap:34px;
 }
 
-/* HERO */
+/* ---------------- HERO ---------------- */
+
 .hero{
   min-height:100vh;
-
   display:flex;
   align-items:center;
-
   padding:0 70px;
 }
 
@@ -63,34 +62,26 @@ body{
   font-weight:300;
   line-height:0.92;
   letter-spacing:-3px;
-
   margin-bottom:28px;
 }
 
 .hero-text p{
   max-width:420px;
-
   font-size:15px;
   line-height:1.8;
   color:#555;
-
   margin-top:10px;
 }
 
 .link{
   display:inline-block;
-
   margin-top:42px;
-
   font-size:14px;
   font-weight:300;
-
   border-bottom:1px solid #111;
   padding-bottom:5px;
-
   text-decoration:none;
   color:#111;
-
   transition:0.3s ease;
 }
 
@@ -98,7 +89,8 @@ body{
   opacity:0.4;
 }
 
-/* FEATURED IMAGE */
+/* ---------------- FEATURED ---------------- */
+
 .featured{
   padding:160px 70px;
 }
@@ -109,7 +101,8 @@ body{
   display:block;
 }
 
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
+
 footer{
   padding:70px;
   font-size:12px;
@@ -117,217 +110,98 @@ footer{
   letter-spacing:0.3px;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
+/* =========================================================
+   WORKS (NEW WENDY-STYLE YEAR ARCHIVE SYSTEM)
+========================================================= */
 
-.nav{
-  padding:30px;
-}
-
-.nav-right{
-  gap:18px;
-}
-
-.hero{
-  padding:0 30px;
-}
-
-.hero-text h1{
-  font-size:56px;
-  letter-spacing:-2px;
-}
-
-.featured{
-  padding:100px 30px;
-}
-
-}
-/* ---------------- MOBILE RESPONSIVE ---------------- */
-
-@media (max-width: 900px) {
-
-  /* NAV */
-  .nav{
-    padding: 25px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .nav-right{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .nav a{
-    font-size: 12px;
-  }
-
-  /* HERO */
-  .hero{
-    padding: 0 20px;
-  }
-
-  .hero-text h1{
-    font-size: 44px;
-    line-height: 1.05;
-    letter-spacing: -1px;
-  }
-
-  .hero-text p{
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .link{
-    font-size: 13px;
-  }
-
-}
- /* ---------------- WORKS PAGE (UPGRADED EDITORIAL STYLE) ---------------- */
-
-.works{
-  padding:180px 70px 120px;
-}
-
-/* title like exhibition header */
-.page-title{
-  font-size:48px;
-  font-weight:300;
-  letter-spacing:-1px;
-
-  margin-bottom:90px;
-}
-
-/* each work becomes a gallery row */
-.work{
+.works-layout{
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:60px;
-
-  margin-bottom:110px;
+  min-height:100vh;
+  padding:160px 70px;
+  gap:80px;
 }
 
-/* image block */
-.work img{
-  width:58%;
-  height:auto;
-  display:block;
-
-  transition:transform 0.6s ease;
-}
-
-.work:hover img{
-  transform:scale(1.02);
-}
-
-/* text block */
-.work-text{
-  width:38%;
+/* LEFT: YEARS */
+.years{
+  width:20%;
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:20px;
+  position:sticky;
+  top:160px;
 }
 
-/* title feels like label in gallery */
-.work-title{
-  font-size:15px;
-  font-weight:300;
-  text-decoration:none;
-  color:#111;
+.year{
+  background:none;
+  border:none;
+  text-align:left;
 
+  font-size:14px;
+  font-weight:300;
+  letter-spacing:1px;
+
+  cursor:pointer;
+  color:#111;
+  opacity:0.4;
   transition:0.3s ease;
 }
 
-.work-title:hover{
-  opacity:0.45;
+.year:hover{
+  opacity:1;
 }
 
-/* metadata stacked (clean museum label style) */
-.work-info{
-  font-size:13px;
-  line-height:1.8;
-  color:#666;
+.year.active{
+  opacity:1;
 }
 
-/* subtle divider between works (important for editorial feel) */
-.work:not(:last-child)::after{
-  content:"";
-  display:block;
-
-  margin-top:70px;
-  width:100%;
-  height:1px;
-  background:#eee;
+/* RIGHT PANEL */
+.works-panel{
+  width:80%;
 }
 
-/* ---------------- MOBILE ---------------- */
-
-@media (max-width:900px){
-
-  .works{
-    padding:140px 20px 100px;
-  }
-
-  .page-title{
-    font-size:34px;
-    margin-bottom:50px;
-  }
-
-  .work{
-    flex-direction:column;
-    gap:20px;
-    margin-bottom:80px;
-  }
-
-  .work img{
-    width:100%;
-  }
-
-  .work-text{
-    width:100%;
-  }
-
-}
-
-/* ---------------- MOBILE ---------------- */
-
-@media (max-width:900px){
-
-.works{
-  padding:120px 20px;
-}
-
-.page-title{
-  font-size:28px;
-  margin-bottom:50px;
-}
-
-.work-text{
+/* YEAR GROUPS */
+.year-group{
+  display:none;
   flex-direction:column;
-  gap:10px;
+  gap:40px;
 }
 
-.work-info{
-  text-align:left;
+.year-group.active{
+  display:flex;
 }
 
+/* WORK ITEMS */
+.work-item{
+  display:flex;
+  align-items:center;
+  gap:30px;
+
+  text-decoration:none;
+  color:#111;
 }
-/* ---------------- STATEMENT PAGE ---------------- */
+
+.work-item img{
+  width:260px;
+  height:auto;
+  display:block;
+  transition:transform 0.6s ease;
+}
+
+.work-item:hover img{
+  transform:scale(1.03);
+}
+
+.work-item span{
+  font-size:15px;
+  font-weight:300;
+}
+
+/* ---------------- STATEMENT ---------------- */
 
 .statement-page{
   padding:140px 70px;
 }
 
-.page-title{
-  font-size:42px;
-  font-weight:300;
-  margin-bottom:70px;
-}
-
-/* TEXT BLOCK */
 .statement-text{
   max-width:720px;
 }
@@ -336,29 +210,10 @@ footer{
   font-size:15px;
   line-height:1.9;
   color:#444;
-
   margin-bottom:24px;
 }
 
-/* ---------------- MOBILE ---------------- */
-
-@media (max-width:900px){
-
-.statement-page{
-  padding:120px 20px;
-}
-
-.page-title{
-  font-size:28px;
-  margin-bottom:40px;
-}
-
-.statement-text{
-  max-width:100%;
-}
-
-}
-/* ---------------- CV PAGE ---------------- */
+/* ---------------- CV ---------------- */
 
 .cv-page{
   padding:140px 70px;
@@ -371,14 +226,6 @@ footer{
   max-width:1100px;
 }
 
-/* TITLE */
-.page-title{
-  font-size:42px;
-  font-weight:300;
-  margin-bottom:70px;
-}
-
-/* BLOCKS */
 .cv-block h3{
   font-size:14px;
   font-weight:400;
@@ -392,79 +239,83 @@ footer{
   color:#444;
 }
 
-/* ---------------- MOBILE ---------------- */
+/* ---------------- RESPONSIVE ---------------- */
 
-@media (max-width:900px){
-
-.cv-page{
-  padding:120px 20px;
-}
-
-.cv-grid{
-  grid-template-columns:1fr;
-  gap:50px;
-}
-
-.page-title{
-  font-size:28px;
-  margin-bottom:40px;
-}
-
-}
-.year-section{
-  padding:80px 70px;
-}
-
-.year-title{
-  font-size:14px;
-  font-weight:300;
-  letter-spacing:2px;
-  margin-bottom:30px;
-  color:#111;
-}
-
-/* GRID like portfolio archive */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:40px;
-}
-
-/* image-first items */
-.grid-item img{
-  width:100%;
-  display:block;
-  transition:transform 0.6s ease;
-}
-
-.grid-item:hover img{
-  transform:scale(1.02);
-}
-
-/* caption minimal like gallery label */
-.caption{
-  margin-top:10px;
-  font-size:13px;
-  color:#666;
-  line-height:1.6;
-}
-
-/* optional bigger item */
-.grid-item.large{
-  grid-column:span 2;
-}
-
-/* responsive */
 @media(max-width:900px){
-  .grid{
+
+  /* NAV */
+  .nav{
+    padding:25px 20px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .nav-right{
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+  .nav a{
+    font-size:12px;
+  }
+
+  /* HERO */
+  .hero{
+    padding:0 20px;
+  }
+
+  .hero-text h1{
+    font-size:44px;
+    line-height:1.05;
+    letter-spacing:-1px;
+  }
+
+  .hero-text p{
+    font-size:14px;
+    max-width:100%;
+  }
+
+  /* FEATURED */
+  .featured{
+    padding:100px 20px;
+  }
+
+  /* WORKS */
+  .works-layout{
+    flex-direction:column;
+    padding:120px 20px;
+  }
+
+  .years{
+    flex-direction:row;
+    width:100%;
+    position:relative;
+    top:0;
+    gap:25px;
+  }
+
+  .works-panel{
+    width:100%;
+  }
+
+  .work-item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .work-item img{
+    width:100%;
+  }
+
+  /* CV */
+  .cv-page{
+    padding:120px 20px;
+  }
+
+  .cv-grid{
     grid-template-columns:1fr;
+    gap:50px;
   }
 
-  .year-section{
-    padding:60px 20px;
-  }
-
-  .grid-item.large{
-    grid-column:auto;
-  }
 }
