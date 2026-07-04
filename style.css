@@ -253,3 +253,46 @@ footer{
 }
 
 }
+/* ---------------- STATEMENT PAGE ---------------- */
+
+.statement-page{
+  padding:140px 70px;
+}
+
+.page-title{
+  font-size:42px;
+  font-weight:300;
+  margin-bottom:70px;
+}
+
+/* TEXT BLOCK */
+.statement-text{
+  max-width:720px;
+}
+
+.statement-text p{
+  font-size:15px;
+  line-height:1.9;
+  color:#444;
+
+  margin-bottom:24px;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:900px){
+
+.statement-page{
+  padding:120px 20px;
+}
+
+.page-title{
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+.statement-text{
+  max-width:100%;
+}
+
+}
