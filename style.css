@@ -118,27 +118,33 @@ footer{
 }
 
 /* =========================================================
-   WORKS (UNIFIED EDITORIAL ARCHIVE — FIXED)
+   WORKS (MINIMAL EDITORIAL VERSION — MATCHES SITE STYLE)
 ========================================================= */
 
-.page-title{
-  font-size:48px;
-  font-weight:300;
-  margin-bottom:50px;
-}
-
-/* YEARS INLINE (NOT SIDEBAR) */
-.years-inline{
+.works-layout{
   display:flex;
-  gap:30px;
-  margin-bottom:70px;
+  padding:140px 70px;
+  gap:80px;
 }
 
+/* LEFT YEARS */
+.years{
+  width:20%;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  position:sticky;
+  top:140px;
+}
+
+/* SIMPLE TEXT LINKS (NO BUTTON FEEL) */
 .year{
   font-size:14px;
   font-weight:300;
-  letter-spacing:1px;
+  letter-spacing:0.5px;
   cursor:pointer;
+
+  color:#111;
   opacity:0.4;
   transition:0.3s ease;
 }
@@ -151,7 +157,12 @@ footer{
   opacity:1;
 }
 
-/* WORK LIST (SAME STYLE AS SITE) */
+/* RIGHT SIDE */
+.works-panel{
+  width:80%;
+}
+
+/* YEAR GROUPS */
 .year-group{
   display:none;
 }
@@ -160,12 +171,14 @@ footer{
   display:block;
 }
 
+/* WORK ITEM (same visual language as site) */
 .work-item{
   display:flex;
   align-items:center;
   gap:40px;
 
   margin-bottom:80px;
+
   text-decoration:none;
   color:#111;
 }
@@ -184,6 +197,37 @@ footer{
 .work-item span{
   font-size:15px;
   font-weight:300;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+  .works-layout{
+    flex-direction:column;
+    padding:120px 20px;
+  }
+
+  .years{
+    flex-direction:row;
+    width:100%;
+    position:relative;
+    top:0;
+    gap:25px;
+  }
+
+  .works-panel{
+    width:100%;
+  }
+
+  .work-item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .work-item img{
+    width:100%;
+  }
 }
 
 /* ---------------- STATEMENT ---------------- */
