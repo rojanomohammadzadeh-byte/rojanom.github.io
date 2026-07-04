@@ -142,3 +142,46 @@ footer{
 }
 
 }
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+
+  /* NAV */
+  .nav{
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .nav a{
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero{
+    padding: 0 20px;
+  }
+
+  .hero-text h1{
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .hero-text p{
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .link{
+    font-size: 13px;
+  }
+
+}
