@@ -142,3 +142,37 @@
 }
 
 }
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:50px 70px;
+
+  background:transparent;
+
+  z-index:999;
+}
+
+.nav-right{
+  display:flex;
+  gap:34px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#111;
+  font-size:13px;
+  font-weight:300;
+  letter-spacing:0.5px;
+  transition:0.3s ease;
+}
+
+.nav a:hover{
+  opacity:0.35;
+}
