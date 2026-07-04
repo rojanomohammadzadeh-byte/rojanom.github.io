@@ -1,3 +1,4 @@
+
 /* ---------------- RESET ---------------- */
 
 *{
@@ -111,7 +112,7 @@ footer{
 }
 
 /* =========================================================
-   WORKS (YEAR ARCHIVE SYSTEM)
+   WORKS (UPDATED CLEAN EDITORIAL VERSION)
 ========================================================= */
 
 .works-layout{
@@ -131,7 +132,7 @@ footer{
   top:160px;
 }
 
-/* YEAR TEXT (NOT BUTTON STYLE) */
+/* YEAR LINKS (clean editorial text style) */
 .year{
   font-size:14px;
   font-weight:300;
@@ -168,7 +169,7 @@ footer{
   display:flex;
 }
 
-/* WORK ITEMS */
+/* WORK ITEMS (gallery style) */
 .work-item{
   display:flex;
   align-items:center;
@@ -176,6 +177,7 @@ footer{
 
   text-decoration:none;
   color:#111;
+  margin-bottom:40px;
 }
 
 .work-item img{
