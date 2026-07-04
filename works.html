@@ -1,72 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="works-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Selected Works</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<header class="nav">
-  <nav class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="works.html">Works</a>
-    <a href="statement.html">Statement</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-
-<section class="works">
-
-  <h1 class="page-title">Selected Works</h1>
-
-  <!-- 2026 -->
-  <div class="year-section">
-    <h2 class="year-title">2026</h2>
-
-    <div class="grid">
-
-      <div class="grid-item">
-        <img src="sugar_sculpture.jpg" alt="Feast and Fight">
-        <div class="caption">
-          Feast and Fight<br>
-          Sugar, glue, mixed materials
-        </div>
-      </div>
-
-    </div>
+  <!-- LEFT: YEARS -->
+  <div class="years">
+    <button class="year active" onclick="showYear('2026')">2026</button>
+    <button class="year" onclick="showYear('2025')">2025</button>
   </div>
 
+  <!-- RIGHT: WORKS -->
+  <div class="works-panel">
 
-  <!-- 2025 -->
-  <div class="year-section">
-    <h2 class="year-title">2025</h2>
+    <!-- 2026 -->
+    <div class="year-group active" id="2026">
 
-    <div class="grid">
-
-      <div class="grid-item large">
-        <a href="transplantation.html">
-          <img src="transplantation1.jpg" alt="Transplantation Series">
-        </a>
-
-        <div class="caption">
-          Transplantation Series I<br>
-          Mixed media installation
-        </div>
-      </div>
+      <a href="#" class="work-item">
+        <img src="sugar_sculpture.jpg">
+        <span>Feast and Fight</span>
+      </a>
 
     </div>
+
+    <!-- 2025 -->
+    <div class="year-group" id="2025">
+
+      <a href="transplantation.html" class="work-item">
+        <img src="transplantation1.jpg">
+        <span>Transplantation Series I</span>
+      </a>
+
+    </div>
+
   </div>
 
 </section>
-
-</body>
-</html>
