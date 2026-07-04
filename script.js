@@ -16,14 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function showYear(year, event) {
   const groups = document.querySelectorAll('.year-group');
-  const buttons = document.querySelectorAll('.year');
+  const years = document.querySelectorAll('.year');
 
   groups.forEach(g => g.classList.remove('active'));
-  buttons.forEach(b => b.classList.remove('active'));
+  years.forEach(y => y.classList.remove('active'));
 
   document.getElementById(year).classList.add('active');
-
-  if (event) {
-    event.target.classList.add('active');
-  }
+  event.target.classList.add('active');
+}
 }
