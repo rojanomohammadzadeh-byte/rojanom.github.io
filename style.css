@@ -9,77 +9,98 @@ body{
   font-family:'Inter', sans-serif;
   background:#fff;
   color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 /* NAV */
 .nav{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
+
   display:flex;
   justify-content:space-between;
-  padding:40px 60px;
+  align-items:center;
+
+  padding:50px 70px;
+
   z-index:100;
 }
 
 .nav a{
   text-decoration:none;
   color:#111;
-  font-size:14px;
+  font-size:13px;
   font-weight:300;
-  letter-spacing:0.3px;
-  transition:0.3s;
+  letter-spacing:0.5px;
+
+  transition:0.3s ease;
 }
 
 .nav a:hover{
-  opacity:0.4;
+  opacity:0.35;
 }
 
 .nav-right{
   display:flex;
-  gap:30px;
+  gap:34px;
 }
 
 /* HERO */
 .hero{
-  height:100vh;
+  min-height:100vh;
+
   display:flex;
   align-items:center;
-  padding:0 60px;
+
+  padding:0 70px;
 }
 
 .hero-text h1{
-  font-size:96px;
+  font-size:104px;
   font-weight:300;
-  line-height:0.95;
-  letter-spacing:-2px;
+  line-height:0.92;
+  letter-spacing:-3px;
+
+  margin-bottom:28px;
 }
 
 .hero-text p{
   max-width:420px;
-  margin-top:30px;
+
   font-size:15px;
-  color:#444;
-  line-height:1.7;
+  line-height:1.8;
+  color:#555;
+
+  margin-top:10px;
 }
 
 .link{
   display:inline-block;
-  margin-top:40px;
+
+  margin-top:42px;
+
+  font-size:14px;
+  font-weight:300;
+
   border-bottom:1px solid #111;
   padding-bottom:5px;
+
   text-decoration:none;
   color:#111;
-  transition:0.3s;
+
+  transition:0.3s ease;
 }
 
 .link:hover{
-  opacity:0.5;
+  opacity:0.4;
 }
 
 /* FEATURED IMAGE */
 .featured{
-  padding:120px 60px;
+  padding:160px 70px;
 }
 
 .featured img{
@@ -90,32 +111,34 @@ body{
 
 /* FOOTER */
 footer{
-  padding:60px;
+  padding:70px;
   font-size:12px;
-  color:#777;
+  color:#888;
+  letter-spacing:0.3px;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-
-.hero{
-  padding:0 30px;
-}
-
-.hero-text h1{
-  font-size:54px;
-}
 
 .nav{
   padding:30px;
 }
 
 .nav-right{
-  gap:15px;
+  gap:18px;
+}
+
+.hero{
+  padding:0 30px;
+}
+
+.hero-text h1{
+  font-size:56px;
+  letter-spacing:-2px;
 }
 
 .featured{
-  padding:80px 30px;
+  padding:100px 30px;
 }
 
 }
