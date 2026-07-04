@@ -49,13 +49,22 @@ body{
   gap:34px;
 }
 
+/* ---------------- GLOBAL PAGE SPACING ---------------- */
+
+.hero,
+.featured,
+.statement-page,
+.cv-page,
+.works-page{
+  padding:140px 70px;
+}
+
 /* ---------------- HERO ---------------- */
 
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
-  padding:0 70px;
 }
 
 .hero-text h1{
@@ -71,8 +80,9 @@ body{
   font-size:15px;
   line-height:1.8;
   color:#555;
-  margin-top:10px;
 }
+
+/* ---------------- LINK STYLE ---------------- */
 
 .link{
   display:inline-block;
@@ -92,10 +102,6 @@ body{
 
 /* ---------------- FEATURED ---------------- */
 
-.featured{
-  padding:160px 70px;
-}
-
 .featured img{
   width:100%;
   height:auto;
@@ -112,35 +118,27 @@ footer{
 }
 
 /* =========================================================
-   WORKS (UPDATED CLEAN EDITORIAL VERSION)
+   WORKS (UNIFIED EDITORIAL ARCHIVE — FIXED)
 ========================================================= */
 
-.works-layout{
-  display:flex;
-  min-height:100vh;
-  padding:160px 70px;
-  gap:80px;
+.page-title{
+  font-size:48px;
+  font-weight:300;
+  margin-bottom:50px;
 }
 
-/* LEFT: YEARS */
-.years{
-  width:20%;
+/* YEARS INLINE (NOT SIDEBAR) */
+.years-inline{
   display:flex;
-  flex-direction:column;
-  gap:20px;
-  position:sticky;
-  top:160px;
+  gap:30px;
+  margin-bottom:70px;
 }
 
-/* YEAR LINKS (clean editorial text style) */
 .year{
   font-size:14px;
   font-weight:300;
   letter-spacing:1px;
-
   cursor:pointer;
-  color:#111;
-
   opacity:0.4;
   transition:0.3s ease;
 }
@@ -153,42 +151,34 @@ footer{
   opacity:1;
 }
 
-/* RIGHT PANEL */
-.works-panel{
-  width:80%;
-}
-
-/* YEAR GROUPS */
+/* WORK LIST (SAME STYLE AS SITE) */
 .year-group{
   display:none;
-  flex-direction:column;
-  gap:40px;
 }
 
 .year-group.active{
-  display:flex;
+  display:block;
 }
 
-/* WORK ITEMS (gallery style) */
 .work-item{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:40px;
 
+  margin-bottom:80px;
   text-decoration:none;
   color:#111;
-  margin-bottom:40px;
 }
 
 .work-item img{
-  width:260px;
+  width:420px;
   height:auto;
   display:block;
-  transition:transform 0.6s ease;
+  transition:0.6s ease;
 }
 
 .work-item:hover img{
-  transform:scale(1.03);
+  transform:scale(1.02);
 }
 
 .work-item span{
@@ -197,10 +187,6 @@ footer{
 }
 
 /* ---------------- STATEMENT ---------------- */
-
-.statement-page{
-  padding:140px 70px;
-}
 
 .statement-text{
   max-width:720px;
@@ -215,10 +201,6 @@ footer{
 
 /* ---------------- CV ---------------- */
 
-.cv-page{
-  padding:140px 70px;
-}
-
 .cv-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -230,7 +212,6 @@ footer{
   font-size:14px;
   font-weight:400;
   margin-bottom:12px;
-  letter-spacing:0.4px;
 }
 
 .cv-block p{
@@ -243,7 +224,6 @@ footer{
 
 @media(max-width:900px){
 
-  /* NAV */
   .nav{
     padding:25px 20px;
     flex-direction:column;
@@ -260,12 +240,7 @@ footer{
     font-size:12px;
   }
 
-  /* HERO */
-  .hero{
-    padding:0 20px;
-  }
-
-  .hero-text h1{
+  .hero h1{
     font-size:44px;
     line-height:1.05;
     letter-spacing:-1px;
@@ -276,29 +251,6 @@ footer{
     max-width:100%;
   }
 
-  /* FEATURED */
-  .featured{
-    padding:100px 20px;
-  }
-
-  /* WORKS */
-  .works-layout{
-    flex-direction:column;
-    padding:120px 20px;
-  }
-
-  .years{
-    flex-direction:row;
-    width:100%;
-    position:relative;
-    top:0;
-    gap:25px;
-  }
-
-  .works-panel{
-    width:100%;
-  }
-
   .work-item{
     flex-direction:column;
     align-items:flex-start;
@@ -306,11 +258,6 @@ footer{
 
   .work-item img{
     width:100%;
-  }
-
-  /* CV */
-  .cv-page{
-    padding:120px 20px;
   }
 
   .cv-grid{
