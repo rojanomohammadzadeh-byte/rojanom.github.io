@@ -120,3 +120,34 @@
 
     margin-top:18px;
 }
+@media (max-width:900px){
+
+.works-page{
+
+    grid-template-columns:1fr;
+
+    padding:120px 20px 60px;
+
+}
+
+.years{
+
+    position:relative;
+
+    top:auto;
+
+    display:flex;
+
+    gap:24px;
+
+    margin-bottom:40px;
+
+}
+
+.work img{
+
+    max-width:100%;
+
+}
+
+}
