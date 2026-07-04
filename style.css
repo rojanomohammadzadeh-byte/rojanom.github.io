@@ -1,3 +1,12 @@
+
+/* ==============================
+   DESIGN SYSTEM VARIABLES
+============================== */
+
+:root{
+  --nav-height: 90px;
+}
+
 /* ==============================
    RESET
 ============================== */
@@ -15,12 +24,12 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 
-  /* FIX: global space under fixed nav */
-  padding-top:120px;
+  /* FIX: perfect alignment with fixed nav */
+  padding-top:var(--nav-height);
 }
 
 /* ==============================
-   NAV (GLOBAL - SAME FOR ALL PAGES)
+   NAV (GLOBAL - ALL PAGES)
 ============================== */
 
 .nav{
@@ -29,11 +38,13 @@ body{
   left:0;
   right:0;
 
+  height:var(--nav-height);
+
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  padding:40px 70px;
+  padding:0 70px;
 
   background:transparent;
   z-index:999;
@@ -76,7 +87,7 @@ body{
 
 .years{
   position:sticky;
-  top:140px;
+  top:calc(var(--nav-height) + 40px);
   height:fit-content;
 }
 
@@ -107,7 +118,7 @@ body{
   display:block;
 }
 
-/* PROJECT ITEM */
+/* PROJECT ITEMS */
 
 .project{
   display:block;
