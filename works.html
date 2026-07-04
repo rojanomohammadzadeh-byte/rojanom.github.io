@@ -1,32 +1,40 @@
+<!-- NAV (same as other pages) -->
+<header class="nav">
+  <nav class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="works.html">Works</a>
+    <a href="statement.html">Statement</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
 <section class="works-layout">
 
-  <!-- LEFT: YEARS -->
+  <!-- LEFT: YEARS (NOT BUTTONS ANYMORE) -->
   <div class="years">
-    <button class="year active" onclick="showYear('2026', event)">2026</button>
-<button class="year" onclick="showYear('2025', event)">2025</button>
+
+    <div class="year active" onclick="showYear('2026', event)">2026</div>
+    <div class="year" onclick="showYear('2025', event)">2025</div>
+
   </div>
 
   <!-- RIGHT: WORKS -->
   <div class="works-panel">
 
-    <!-- 2026 -->
     <div class="year-group active" id="2026">
-
       <a href="#" class="work-item">
         <img src="sugar_sculpture.jpg">
         <span>Feast and Fight</span>
       </a>
-
     </div>
 
-    <!-- 2025 -->
     <div class="year-group" id="2025">
-
       <a href="transplantation.html" class="work-item">
         <img src="transplantation1.jpg">
         <span>Transplantation Series I</span>
       </a>
-
     </div>
 
   </div>
