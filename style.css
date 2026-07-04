@@ -1,8 +1,4 @@
 
-/* ==============================
-   DESIGN SYSTEM VARIABLES
-============================== */
-
 :root{
   --nav-height: 90px;
 }
@@ -24,12 +20,12 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 
-  /* FIX: perfect alignment with fixed nav */
+  /* space under fixed nav */
   padding-top:var(--nav-height);
 }
 
 /* ==============================
-   NAV (GLOBAL - ALL PAGES)
+   NAV
 ============================== */
 
 .nav{
@@ -69,25 +65,26 @@ body{
 }
 
 /* ==============================
-   WORKS
+   WORKS (FIXED SPACING SYSTEM)
 ============================== */
 
 .works-page{
   max-width:1300px;
   margin:auto;
 
-  padding:60px 70px 120px;
+  /* FIX: more balanced left/right breathing space */
+  padding:120px 100px 120px;
 
   display:grid;
-  grid-template-columns:140px 1fr;
-  column-gap:90px;
+  grid-template-columns:160px 1fr;
+  column-gap:100px;
 }
 
 /* YEARS */
 
 .years{
   position:sticky;
-  top:calc(var(--nav-height) + 40px);
+  top:calc(var(--nav-height) + 50px);
   height:fit-content;
 }
 
@@ -152,7 +149,7 @@ body{
 
   .works-page{
     grid-template-columns:1fr;
-    padding:40px 20px 80px;
+    padding:100px 20px 80px;
   }
 
   .years{
