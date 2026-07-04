@@ -1,4 +1,4 @@
-<!-- NAV (same as other pages) -->
+<!-- NAV -->
 <header class="nav">
   <nav class="nav-right">
     <a href="index.html">Home</a>
@@ -10,18 +10,19 @@
 </header>
 
 
-<section class="works-layout">
+<section class="works-page">
 
-  <!-- LEFT: YEARS (NOT BUTTONS ANYMORE) -->
-  <div class="years">
+  <h1 class="page-title">Selected Works</h1>
 
-    <div class="year active" onclick="showYear('2026', event)">2026</div>
-    <div class="year" onclick="showYear('2025', event)">2025</div>
-
+  <!-- YEARS (INLINE, NOT SIDEBAR) -->
+  <div class="years-inline">
+    <span class="year active" onclick="showYear('2026', event)">2026</span>
+    <span class="year" onclick="showYear('2025', event)">2025</span>
   </div>
 
-  <!-- RIGHT: WORKS -->
-  <div class="works-panel">
+
+  <!-- WORKS -->
+  <div class="works-container">
 
     <div class="year-group active" id="2026">
       <a href="#" class="work-item">
