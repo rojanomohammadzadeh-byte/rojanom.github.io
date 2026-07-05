@@ -184,3 +184,36 @@ body{
   line-height:1.8;
   color:#444;
 }
+
+/* ==============================
+   STATEMENT PAGE (UNIFIED LAYOUT)
+============================== */
+
+.statement-page{
+  max-width:1300px;
+  margin:auto;
+
+  /* same spacing system as CV + Works */
+  padding:120px 70px;
+}
+
+/* title consistency */
+.statement-page .page-title{
+  font-size:42px;
+  font-weight:300;
+  margin-bottom:60px;
+}
+
+/* text container */
+.statement-text{
+  max-width:800px;
+}
+
+/* paragraphs */
+.statement-text p{
+  font-size:15px;
+  line-height:1.9;
+  color:#444;
+
+  margin-bottom:24px;
+}
