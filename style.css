@@ -217,3 +217,60 @@ body{
 
   margin-bottom:24px;
 }
+
+/* ==============================
+   CV TYPOGRAPHY (EDITORIAL STYLE)
+============================== */
+
+.cv-page{
+  max-width:1300px;
+  margin:auto;
+  padding:120px 70px;
+}
+
+/* spacing between sections */
+.cv-section{
+  margin-bottom:60px;
+  max-width:850px;
+}
+
+/* section titles (EDUCATION, EXHIBITIONS...) */
+.cv-section h3{
+  font-size:14px;
+  font-weight:600; /* bold titles */
+  letter-spacing:1px;
+  margin-bottom:18px;
+  text-transform:uppercase;
+}
+
+/* main text */
+.cv-section p{
+  font-size:15px;
+  line-height:1.9;
+  color:#444;
+}
+
+/* make strong labels (Solo Exhibitions etc.) slightly bolder */
+.cv-section b{
+  font-weight:500;
+}
+
+/* YEARS (anything like Sep 2026 – Present etc.) */
+.cv-section p br{
+  line-height:2;
+}
+
+/* OPTIONAL: italic styling for dates (auto styling via CSS trick) */
+.cv-section p{
+  position:relative;
+}
+
+/* target text after em dash or year-like lines (manual styling improvement) */
+.cv-section p{
+  font-variant-numeric: tabular-nums;
+}
+
+/* subtle spacing inside paragraphs */
+.cv-section p + p{
+  margin-top:18px;
+}
