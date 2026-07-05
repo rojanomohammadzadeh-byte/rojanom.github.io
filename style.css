@@ -141,3 +141,46 @@ body{
     max-width:100%;
   }
 }
+/* ==============================
+   CV PAGE FIX (MATCH HOME SPACING)
+============================== */
+
+.cv-page{
+  max-width:1300px;
+  margin:auto;
+
+  /* SAME SIDE MARGINS AS HOME / WORKS */
+  padding:120px 70px;
+}
+
+/* optional: consistent text width */
+.cv-section{
+  max-width:800px;
+}
+
+/* titles consistency */
+.cv-page .page-title{
+  font-size:42px;
+  font-weight:300;
+  margin-bottom:60px;
+}
+
+/* spacing between sections */
+.cv-section{
+  margin-bottom:50px;
+}
+
+/* section headings */
+.cv-section h3{
+  font-size:14px;
+  font-weight:400;
+  margin-bottom:15px;
+  letter-spacing:0.5px;
+}
+
+/* paragraph style */
+.cv-section p{
+  font-size:15px;
+  line-height:1.8;
+  color:#444;
+}
