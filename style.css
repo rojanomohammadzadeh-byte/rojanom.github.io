@@ -1,0 +1,167 @@
+@font-face {
+    font-family: main-font;
+    src: url(font/ARIAL.woff);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+body{
+    margin: 0;  
+    font-family: main-font; 
+}
+
+
+div.main-box{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+div.main-box div.slideshow{
+    width: 100%;
+    
+    
+    
+}
+/* 
+div.main-box div.slideshow img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+} */
+div.main-box div.slideshow div.slideshow-img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+    opacity: 0;
+    /* margin: auto; */
+    
+
+}
+
+
+div.main-box div.slideshow div.slideshow-img.active{
+    opacity: 1 !important;
+    animation: zoom infinite 13s forwards ease;
+    animation-delay: 1s;
+}
+
+div.main-box div.content-box{
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    
+    left: 10%;
+    
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    
+}
+
+div.main-box div.content-box div.name-and-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    
+}
+
+div.main-box div.content-box div.name-and-button h1{
+    font-size: 3.188rem;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 0;
+    text-shadow: 3px 3px 3px #181818;
+}
+
+div.main-box div.content-box div.name-and-button a{
+    font-size: 14px;
+    font-weight: 900;
+    color: #ffffff;
+    padding: 1em 1.45em;
+    border: 1px solid #ffffff;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    /* backdrop-filter: blur(20px); */
+    text-shadow: 2px 2px 2px #181818;
+    
+}
+
+
+div.main-box div.content-box div.name-and-button a:hover{
+    color: #181818;
+    /* border-color: #181818; */
+    background-color:#ffffff;
+    text-shadow: none;
+}
+
+
+div.main-box div.content-box div.social-media{
+    margin-top: 100px;
+}
+
+div.main-box div.content-box div.social-media svg{
+    border-radius: 50%;
+    fill: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+
+
+div.main-box div.content-box div.social-media svg g{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+div.main-box div.content-box div.social-media svg:hover g{
+    fill: #E1306C;
+    /* color: pink; */
+    /* stroke: red; */
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+
+/* Break Points */
+@media screen and (max-width:500px) {
+    div.main-box div.content-box div.name-and-button h1{
+        font-size: 2.2rem;       
+    }
+}
