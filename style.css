@@ -3,23 +3,36 @@
     src: url(font/ARIAL.woff);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-a{
+a {
     color: inherit;
     display: inline-block;
     text-decoration: none !important;
 }
 
-body{
-    margin: 0;  
-    font-family: main-font; 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: main-font;
+
+    /* overflow: hidden; */
 }
 
 
-div.main-box{
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+div.main-box {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -27,12 +40,13 @@ div.main-box{
 
 }
 
-div.main-box div.slideshow{
+div.main-box div.slideshow {
     width: 100%;
-    
-    
-    
+
+
+
 }
+
 /* 
 div.main-box div.slideshow img{
     width: 100%;
@@ -41,7 +55,7 @@ div.main-box div.slideshow img{
     left: 0;
 
 } */
-div.main-box div.slideshow div.slideshow-img{
+div.main-box div.slideshow div.slideshow-img {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -53,46 +67,46 @@ div.main-box div.slideshow div.slideshow-img{
     transition: 0.5s;
     opacity: 0;
     /* margin: auto; */
-    
+
 
 }
 
 
-div.main-box div.slideshow div.slideshow-img.active{
+div.main-box div.slideshow div.slideshow-img.active {
     opacity: 1 !important;
     animation: zoom infinite 13s forwards ease;
     animation-delay: 1s;
 }
 
-div.main-box div.content-box{
+div.main-box div.content-box {
     width: 80%;
     margin: auto;
     position: absolute;
-    top: 50%;
-    
+    top: 75%;
+
     left: 10%;
-    
-    transform: translateY(-50%);
+
+    transform: translateY(-75%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
 
-    
+
 }
 
-div.main-box div.content-box div.name-and-button{
+div.main-box div.content-box div.name-and-button {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    
+
 }
 
-div.main-box div.content-box div.name-and-button h1{
+div.main-box div.content-box div.name-and-button h1 {
     font-size: 3.188rem;
     color: #ffffff;
     display: block;
@@ -102,8 +116,8 @@ div.main-box div.content-box div.name-and-button h1{
     text-shadow: 3px 3px 3px #181818;
 }
 
-div.main-box div.content-box div.name-and-button a{
-    font-size: 14px;
+div.main-box div.content-box div.name-and-button a {
+    font-size: 16px;
     font-weight: 900;
     color: #ffffff;
     padding: 1em 1.45em;
@@ -113,47 +127,49 @@ div.main-box div.content-box div.name-and-button a{
     /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
     /* backdrop-filter: blur(20px); */
     text-shadow: 2px 2px 2px #181818;
-    
+
 }
 
 
-div.main-box div.content-box div.name-and-button a:hover{
+div.main-box div.content-box div.name-and-button a:hover {
     color: #181818;
     /* border-color: #181818; */
-    background-color:#ffffff;
+    background-color: #ffffff;
     text-shadow: none;
 }
 
 
-div.main-box div.content-box div.social-media{
+div.main-box div.content-box div.social-media {
     margin-top: 100px;
 }
 
-div.main-box div.content-box div.social-media svg{
+div.main-box div.content-box div.social-media svg {
     border-radius: 50%;
     fill: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    
+    width: 50px;
+    height: 50px;
 }
 
 
-div.main-box div.content-box div.social-media svg g{
+div.main-box div.content-box div.social-media svg g {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     transition: 0.5s;
     cursor: pointer;
 }
 
-div.main-box div.content-box div.social-media svg:hover g{
+div.main-box div.content-box div.social-media svg:hover g {
     fill: #E1306C;
     /* color: pink; */
     /* stroke: red; */
 }
 
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.2);
     }
 }
@@ -161,7 +177,225 @@ div.main-box div.content-box div.social-media svg:hover g{
 
 /* Break Points */
 @media screen and (max-width:500px) {
-    div.main-box div.content-box div.name-and-button h1{
-        font-size: 2.2rem;       
+    div.main-box div.content-box div.name-and-button h1 {
+        font-size: 2.2rem;
     }
+}
+
+/* ---------------------------------------- Work Page Style */
+header div.header-box {
+    padding-block: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header div.header-box h1 {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+section.gallery div.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 10px;
+
+}
+
+section.gallery div.gallery-box div.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+
+section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
+
+    opacity: 1;
+}
+
+section.gallery div.gallery-box div.gallery-item img {
+    width: 100%;
+
+
+
+}
+
+section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+
+}
+
+/*  Modal style */
+
+section.gallery div#gallery-item-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    z-index: 99;
+    background: white;
+    padding-inline: 2rem;
+    display: none;
+    /* display: contents !important; */
+
+
+
+}
+
+section.gallery div#gallery-item-modal div.modal-name-and-button{
+    
+    /* padding-block: 1.5rem; */
+    /* margin-bottom: 10px !important; */
+    /* margin-top: 1.5rem; */
+    width: 90% !important;
+    margin: auto;
+}
+
+section.gallery div#gallery-item-modal div.modal-name-and-button span.name {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 400;
+    text-align: center;
+}
+
+section.gallery div#gallery-item-modal div.modal-name-and-button div.modal-name-and-button-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+    /* background-color: white; */
+}
+
+section.gallery div#gallery-item-modal div.modal-name-and-button div.close-button {
+    cursor: pointer;
+}
+
+section.gallery div#gallery-item-modal div.modal-content {
+    padding-block: 1rem;
+    position: relative;
+}
+
+section.gallery div#gallery-item-modal div.modal-content-box {
+    width: 60%;
+    margin: auto;
+    /* padding-block: 1rem; */
+}
+
+section.gallery div#gallery-item-modal div.modal-content-box>img {
+    width: 100%;
+}
+
+section.gallery div#gallery-item-modal div.modal-content-box span.work-title {
+    color: gray;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+
+
+}
+
+section.gallery div#gallery-item-modal div.modal-content div.prev-next {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+section.gallery div#gallery-item-modal div.modal-content div.prev-next-mobile {
+    display: none;
+}
+
+
+/* Break Points */
+
+
+@media screen and (max-width: 1400px) {
+     section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 70% !important;
+    }
+}
+@media screen and (max-width: 1200px) {
+     section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section.gallery div#gallery-item-modal div.modal-content div.prev-next-mobile {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 100%;
+    }
+
+    section.gallery div#gallery-item-modal div.modal-content div.prev-next{
+        display: none !important;
+    }
+
+    section.gallery div#gallery-item-modal div.modal-name-and-button{
+        width: 100% !important;
+    }
+
+    /* section.gallery div#gallery-item-modal div.modal-name-and-button{
+        padding-block: 1rem;
+    } */
+     
+     section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 578px) {
+
+    section.gallery div#gallery-item-modal {
+        width: 100%;
+    }
+    
+     section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+
+     section.gallery div#gallery-item-modal div.modal-content-box{
+        width: 100% !important;
+    }
+
 }
