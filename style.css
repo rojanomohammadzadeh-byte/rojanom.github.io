@@ -263,7 +263,7 @@ section.gallery div#gallery-item-modal {
 
 section.gallery div#gallery-item-modal div.modal-name-and-button{
     
-    /* padding-block: 1.5rem; */
+    padding-block: 1.5rem;
     /* margin-bottom: 10px !important; */
     /* margin-top: 1.5rem; */
     width: 90% !important;
@@ -294,7 +294,7 @@ section.gallery div#gallery-item-modal div.modal-name-and-button div.close-butto
 }
 
 section.gallery div#gallery-item-modal div.modal-content {
-    padding-block: 1rem;
+    /* padding-block: 1rem; */
     position: relative;
 }
 
