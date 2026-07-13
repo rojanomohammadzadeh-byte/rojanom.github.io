@@ -334,6 +334,11 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next {
     transform: translateY(-50%);
 }
 
+section.gallery div#gallery-item-modal div.modal-content div.prev-next .prev,.next{
+    cursor: pointer;
+}
+
+
 /* Break Points */
 
 
