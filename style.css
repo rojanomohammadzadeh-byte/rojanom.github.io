@@ -304,11 +304,15 @@ section.gallery div#gallery-item-modal div.modal-content-box {
     /* padding-block: 1rem; */
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box>img {
+section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info{
     width: 100%;
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box span.work-title {
+section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
+    width: 100%;
+}
+
+section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info span.work-title {
     color: gray;
     font-weight: 900;
     display: block;
@@ -330,11 +334,6 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next {
     transform: translateY(-50%);
 }
 
-section.gallery div#gallery-item-modal div.modal-content div.prev-next-mobile {
-    display: none;
-}
-
-
 /* Break Points */
 
 
@@ -350,17 +349,13 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next-mobile {
 }
 
 @media screen and (max-width: 992px) {
-    section.gallery div#gallery-item-modal div.modal-content div.prev-next-mobile {
-        display: flex !important;
-        justify-content: space-between;
+    section.gallery div#gallery-item-modal div.modal-content div.prev-next{
+        position: static;
+        transform: translateY(0);
     }
 
     section.gallery div#gallery-item-modal div.modal-content-box{
         width: 100%;
-    }
-
-    section.gallery div#gallery-item-modal div.modal-content div.prev-next{
-        display: none !important;
     }
 
     section.gallery div#gallery-item-modal div.modal-name-and-button{
