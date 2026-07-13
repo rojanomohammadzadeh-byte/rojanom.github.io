@@ -111,7 +111,7 @@ div.main-box div.content-box div.name-and-button h1 {
     color: #ffffff;
     display: block;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     margin-top: 0;
     text-shadow: 3px 3px 3px #181818;
 }
@@ -140,7 +140,7 @@ div.main-box div.content-box div.name-and-button a:hover {
 
 
 div.main-box div.content-box div.social-media {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 div.main-box div.content-box div.social-media svg {
@@ -198,6 +198,10 @@ header div.header-box h1 {
     text-align: center;
 }
 
+
+div.main-box div.content-box{
+    /* padding-block: 2rem; */
+}
 
 section.gallery div.gallery-box {
     display: grid;
