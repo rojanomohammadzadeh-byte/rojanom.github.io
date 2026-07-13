@@ -334,8 +334,19 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next {
     transform: translateY(-50%);
 }
 
-section.gallery div#gallery-item-modal div.modal-content div.prev-next .prev,.next{
+section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev,img.next{
     cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    transition: 0.5s;
+    /* transform: scale(0); */
+    /* position: relative; */
+
+}
+
+
+section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:hover,img.next:hover{
+
+    transform: scale(1.1);
 }
 
 
