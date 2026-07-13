@@ -231,11 +231,17 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     transition: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+
     color: white;
     opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    margin: auto;
+    padding: 1rem;
+    padding: 1rem;
 
 }
 
@@ -357,6 +363,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     section.gallery div#gallery-item-modal div.modal-content-box {
         width: 70% !important;
     }
+
     section.gallery div.gallery-box {
         grid-template-columns: 1fr 1fr 1fr !important;
 
@@ -368,12 +375,13 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     section.gallery div#gallery-item-modal div.modal-content-box {
         width: 80% !important;
     }
-     section.gallery div.gallery-box {
+
+    section.gallery div.gallery-box {
         grid-template-columns: 1fr 1fr 1fr !important;
 
 
     }
-    
+
 }
 
 @media screen and (max-width: 992px) {
@@ -411,8 +419,17 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 
     }
-    
+
 }
+@media screen and (max-width: 650px) {
+    
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
+        font-size: 13px !important;
+    }
+
+}
+
+
 @media screen and (max-width: 578px) {
 
     section.gallery div#gallery-item-modal {
@@ -422,6 +439,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     section.gallery div#gallery-item-modal div.modal-content-box {
         width: 100% !important;
     }
+
     /* section.gallery div.gallery-box {
         grid-template-columns: 1fr 1fr !important;
 
@@ -454,9 +472,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
 
     section.gallery div.gallery-box {
-        
+
         grid-template-columns: 1fr !important;
-        
+
 
     }
 
