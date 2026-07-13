@@ -201,7 +201,7 @@ header div.header-box h1 {
 
 section.gallery div.gallery-box {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 10px;
 
 }
