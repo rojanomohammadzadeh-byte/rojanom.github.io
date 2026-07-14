@@ -204,9 +204,10 @@ div.main-box div.content-box {
 }
 
 section.gallery div.gallery-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 10px;
+    column-count: 4;
+    column-gap: 2px;
+
+    margin: 0 auto;
 
 }
 
@@ -222,7 +223,7 @@ section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
 
 section.gallery div.gallery-box div.gallery-item img {
     width: 100%;
-    aspect-ratio: 1.69;
+
 
 
 }
@@ -305,17 +306,23 @@ section.gallery div#gallery-item-modal div.modal-name-and-button div.close-butto
 
 section.gallery div#gallery-item-modal div.modal-content {
     /* padding-block: 1rem; */
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 section.gallery div#gallery-item-modal div.modal-content-box {
-    width: 60%;
+    max-width: 90%;
     margin: auto;
     /* padding-block: 1rem; */
 }
 
 section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
-    width: 100%;
+    width: 86%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,7 +332,7 @@ section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-i
 section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
     max-width: 100%;
     /* aspect-ratio: 1.69 */
-    height: 70vh !important;
+    max-height: 70vh !important;
 }
 
 section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info span.work-title {
@@ -339,11 +346,12 @@ section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-i
 }
 
 section.gallery div#gallery-item-modal div.modal-content div.prev-next {
-    width: 100%;
-    position: absolute;
+    width: 97%;
+    position: fixed;
     left: 0;
     right: 0;
     top: 50%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -371,11 +379,11 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 @media screen and (max-width: 1400px) {
     section.gallery div#gallery-item-modal div.modal-content-box {
-        width: 70% !important;
+        /* width: 70% !important; */
     }
 
     section.gallery div.gallery-box {
-        grid-template-columns: 1fr 1fr 1fr !important;
+        /* grid-template-columns: 1fr 1fr 1fr !important; */
 
 
     }
@@ -383,11 +391,11 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 @media screen and (max-width: 1200px) {
     section.gallery div#gallery-item-modal div.modal-content-box {
-        width: 80% !important;
+        /* width: 80% !important; */
     }
 
     section.gallery div.gallery-box {
-        grid-template-columns: 1fr 1fr 1fr !important;
+        /* grid-template-columns: 1fr 1fr 1fr !important; */
 
 
     }
@@ -396,8 +404,13 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 @media screen and (max-width: 992px) {
 
+    section.gallery div#gallery-item-modal div.modal-content {
+        position: static;
+        transform: translateY(0);
+    }
+
     section.gallery div#gallery-item-modal div.modal-content-box {
-        width: 100%;
+        max-width: 100%;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -410,7 +423,8 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
+        width: 100%;
+        margin-bottom: 5px;
     }
 
 
@@ -419,18 +433,14 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         width: 100% !important;
     }
 
-    /* section.gallery div#gallery-item-modal div.modal-name-and-button{
-        padding-block: 1rem;
-    } */
 
-    section.gallery div#gallery-item-modal div.modal-content-box {
-        width: 90% !important;
+
+    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
+        width: 100%;
     }
 
     section.gallery div.gallery-box {
-        grid-template-columns: 1fr 1fr 1fr !important;
-
-
+        column-count: 3 !important;
     }
 
 }
@@ -452,13 +462,6 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         font-size: 13px !important;
     }
 
-    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
-        height: auto !important;
-        width: 100%;
-
-
-    }
-
 }
 
 @media screen and (max-width: 578px) {
@@ -467,13 +470,12 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         width: 100%;
     }
 
+    section.gallery div.gallery-box {
+        column-count: 2 !important;
+    }
 
 
-    /* section.gallery div.gallery-box {
-        grid-template-columns: 1fr 1fr !important;
 
-
-    } */
 }
 
 
@@ -483,7 +485,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 @media screen and (max-width: 430px) {
 
     section.gallery div.gallery-box {
-        grid-template-columns: 1fr !important;
+        /* grid-template-columns: 1fr !important; */
 
 
     }
@@ -506,7 +508,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
     section.gallery div.gallery-box {
 
-        grid-template-columns: 1fr !important;
+        /* grid-template-columns: 1fr !important; */
 
 
     }
