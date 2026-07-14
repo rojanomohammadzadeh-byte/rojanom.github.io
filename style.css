@@ -199,7 +199,7 @@ header div.header-box h1 {
 }
 
 
-div.main-box div.content-box{
+div.main-box div.content-box {
     /* padding-block: 2rem; */
 }
 
@@ -242,7 +242,7 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    
+
     margin: auto;
     padding: 1rem;
     padding: 1rem;
@@ -395,14 +395,25 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 }
 
 @media screen and (max-width: 992px) {
-    section.gallery div#gallery-item-modal div.modal-content div.prev-next {
-        position: static;
-        transform: translateY(0);
-    }
 
     section.gallery div#gallery-item-modal div.modal-content-box {
         width: 100%;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column-reverse !important;
     }
+
+    section.gallery div#gallery-item-modal div.modal-content div.prev-next {
+        position: static;
+        transform: translateY(0);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+
 
     section.gallery div#gallery-item-modal div.modal-name-and-button {
         width: 100% !important;
@@ -421,10 +432,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 
     }
-    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img{
-        height: auto !important;
-        width: 100%;
-    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -434,15 +442,24 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
     }
 
+
 }
+
 @media screen and (max-width: 650px) {
-    
-    section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
+
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
+
         font-size: 13px !important;
     }
 
-}
+    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
+        height: auto !important;
+        width: 100%;
 
+
+    }
+
+}
 
 @media screen and (max-width: 578px) {
 
@@ -450,9 +467,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         width: 100%;
     }
 
-    section.gallery div#gallery-item-modal div.modal-content-box {
-        width: 100% !important;
-    }
+
 
     /* section.gallery div.gallery-box {
         grid-template-columns: 1fr 1fr !important;
@@ -472,7 +487,8 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 
     }
-    section.gallery div#gallery-item-modal{
+
+    section.gallery div#gallery-item-modal {
         padding-inline: 1rem;
     }
 
