@@ -325,7 +325,7 @@ section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-i
 section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
     max-width: 100%;
     /* aspect-ratio: 1.69 */
-    height: 492.068px !important;
+    height: 70vh !important;
 }
 
 section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info span.work-title {
@@ -420,6 +420,10 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         grid-template-columns: 1fr 1fr 1fr !important;
 
 
+    }
+    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img{
+        height: auto !important;
+        width: 100%;
     }
 }
 

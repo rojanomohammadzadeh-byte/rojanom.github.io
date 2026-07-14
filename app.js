@@ -23,7 +23,7 @@ if (slideshowImages.length > 0) {
 let instaIcon = document.querySelector("div.main-box div.content-box div.social-media svg")
 if (instaIcon) {
   instaIcon.addEventListener("click", function () {
-    window.location.href = "https://www.google.com/"
+    window.location.href = "https://www.instagram.com/rojaano/"
   })
 }
 
