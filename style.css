@@ -618,15 +618,14 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     section.gallery div.gallery-box {
         column-count: 3 !important;
     }
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
+        padding: 1rem !important;
+    }
 
 }
 
 @media screen and (max-width: 800px) {
-    section.gallery div.gallery-box {
-        grid-template-columns: 1fr 1fr !important;
-
-
-    }
+   
     div.body-box div.content-box main{
     width: 50% !important;
 }
@@ -635,6 +634,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
     div.body-box div.content-box{
         gap: 2rem !important;
+    }
+    section.gallery div.gallery-box {
+        column-count: 2 !important;
     }
 
 
@@ -645,6 +647,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
 
         font-size: 13px !important;
+    }
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
+        padding: 0.5rem !important;
     }
 
 }
@@ -663,6 +668,10 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
     header nav ul li{
         font-size: 12px !important;
+    }
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
+
+        font-size: 11px !important;
     }
 
     
@@ -689,6 +698,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
     .container{
         width: 95% !important;
+    }
+    section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
+        padding: 0.2rem;
     }
 
 }

@@ -17,7 +17,7 @@ const GalleryModule = (() => {
   const nextButton = document.querySelector("section.gallery div#gallery-item-modal div.modal-content div.prev-next .next");
 
   // ---------- Private Methods ----------
-  
+
   const loadData = async () => {
     try {
       const response = await fetch('./worksInfo.json');
@@ -44,16 +44,16 @@ const GalleryModule = (() => {
   // ساخت دکمه‌های دسته‌بندی
   const buildCategoryButtons = (categories) => {
     if (!categoryBox) return;
-    
+
     categoryBox.innerHTML = '';
-    
+
     // گزینه "همه"
-    const allLi = document.createElement('li');
-    allLi.textContent = 'All';
-    allLi.dataset.category = 'all';
-    allLi.classList.add('active-category');
-    categoryBox.appendChild(allLi);
-    
+    // const allLi = document.createElement('li');
+    // allLi.textContent = 'All';
+    // allLi.dataset.category = 'all';
+    // allLi.classList.add('active-category');
+    // categoryBox.appendChild(allLi);
+
     // دسته‌بندی‌های JSON
     categories.forEach(category => {
       const li = document.createElement('li');
@@ -62,24 +62,24 @@ const GalleryModule = (() => {
       categoryBox.appendChild(li);
     });
   };
-
+  // let flag = 0
   // فیلتر کردن آیتم‌ها
   const filterItems = (category) => {
-    if (category === 'all') {
-      return [...allWorkItems];
-    }
+    // if (category === 'all') {
+    //   return [...allWorkItems];
+    // }
     return allWorkItems.filter(item => item.category === category);
   };
 
   // رندر گالری
   const renderGallery = (items) => {
     if (!galleryContainer) return;
-    
+
     galleryContainer.innerHTML = '';
-    
+
     // ذخیره آیتم‌های در حال نمایش
     currentDisplayItems = items;
-    
+
     items.forEach((item, index) => {
       const card = document.createElement('div');
       card.classList.add('gallery-item');
@@ -102,13 +102,13 @@ const GalleryModule = (() => {
   // نمایش مودال با ایندکس در currentDisplayItems
   const showModal = (index) => {
     if (!galleryModal || !modalContainer || currentDisplayItems.length === 0) return;
-    
+
     // ذخیره ایندکس فعلی
     currentIndex = index;
     const item = currentDisplayItems[index];
-    
+
     if (!item) return;
-    
+
     galleryModal.style.display = "block";
     isModalOpen = true;
 
@@ -131,7 +131,7 @@ const GalleryModule = (() => {
 
     // محاسبه ایندکس جدید در currentDisplayItems
     let newIndex = currentIndex + direction;
-    
+
     // چرخش
     if (newIndex < 0) {
       newIndex = currentDisplayItems.length - 1;
@@ -160,7 +160,7 @@ const GalleryModule = (() => {
     // فیلتر و رندر
     const filtered = filterItems(category);
     renderGallery(filtered);
-    
+
     // بستن منو
     const dropDownKey = document.querySelector("header nav ul li.drop-down");
     if (dropDownKey) {
@@ -211,7 +211,7 @@ const GalleryModule = (() => {
   };
 
   // ---------- Public Methods ----------
-  
+
   const init = async () => {
     const items = await loadData();
     if (items.length === 0) {
@@ -228,7 +228,17 @@ const GalleryModule = (() => {
     }
 
     // رندر اولیه
-    renderGallery(items);
+    const initialCategory = "bazm";
+    const filteredItems = filterItems(initialCategory);
+    renderGallery(filteredItems);
+
+    document.querySelectorAll('.drop-down ul li').forEach(li => {
+      li.classList.remove('active-category');
+      if (li.dataset.category === initialCategory) {
+        li.classList.add('active-category');
+      }
+    });
+
 
     setupModalEvents();
   };
@@ -286,12 +296,12 @@ const DropdownModule = (() => {
   const init = () => {
     const dropDownKey = document.querySelector("header nav ul li.drop-down");
     const dropDown = document.querySelector("header nav ul li.drop-down ul");
-    
+
     if (!dropDownKey || !dropDown) return;
 
     const handler = () => {
       const isOpen = dropDownKey.getAttribute("data-check") === "1";
-      
+
       if (isOpen) {
         dropDown.style.height = "0";
         dropDown.style.display = "none";
@@ -302,7 +312,7 @@ const DropdownModule = (() => {
         dropDownKey.setAttribute("data-check", "1");
       }
     };
-    
+
     dropDownKey.removeEventListener('click', dropDownKey._handler);
     dropDownKey._handler = handler;
     dropDownKey.addEventListener("click", handler);
@@ -314,7 +324,7 @@ const DropdownModule = (() => {
 // ------------ Initialize ------------
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded, initializing modules...');
-  
+
   if (document.querySelector('.gallery-box')) {
     GalleryModule.init().then(() => {
       console.log('Gallery initialized successfully');
