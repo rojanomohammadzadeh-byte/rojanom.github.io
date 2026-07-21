@@ -44,7 +44,7 @@ div.body-box div.content-box{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 10rem;
+    gap: 8rem;
 }
 
 div.body-box div.content-box main{
@@ -54,7 +54,7 @@ div.body-box div.content-box main{
 header{
     width: 30%;
     position: sticky;
-    top: 0;
+    top: 1rem;
 }
 
 header nav{
@@ -64,6 +64,10 @@ header nav{
 header nav ul{
     padding: 0;
     width: 100%;
+}
+
+header nav ul li#home a{
+    padding-top: 0 !important;
 }
 
 header nav ul li.drop-down ul li{
@@ -94,11 +98,13 @@ header nav ul li {
     height: 100%;
 } */
 
-header nav ul li.drop-down ul li:hover::after{
+@media(hover: hover){
+    header nav ul li.drop-down ul li:hover::after{
     width: 100%;
     left: 0;
 }
 
+}
 
 header nav ul li a{
     color: #626262;
@@ -442,7 +448,7 @@ section.gallery div#gallery-item-modal div.modal-name-and-button div.modal-name-
     justify-content: space-between;
 
     position: sticky;
-    top: 0;
+    top: 1rem;
     width: 100%;
 
     /* background-color: white; */
@@ -535,6 +541,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 
     }
+    div.body-box div.content-box{
+        gap: 6rem !important;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -546,6 +555,15 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         /* grid-template-columns: 1fr 1fr 1fr !important; */
 
 
+    }
+    div.body-box div.content-box{
+        gap: 5rem !important;
+    }
+     div.body-box div.content-box main{
+    width: 65% !important;
+}
+    header{
+        width: 35% !important;
     }
 
 }
@@ -573,6 +591,16 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
         align-items: center;
         width: 100%;
         margin-bottom: 5px;
+    }
+    div.body-box div.content-box{
+        gap: 3rem !important;
+    }
+
+     div.body-box div.content-box main{
+    width: 60% !important;
+}
+    header{
+        width: 40% !important;
     }
 
 
@@ -658,6 +686,9 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
      div.body-box div.content-box{
         gap: 1rem !important;
+    }
+    .container{
+        width: 95% !important;
     }
 
 }
