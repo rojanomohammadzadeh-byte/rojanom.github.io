@@ -1,0 +1,138 @@
+@font-face {
+    font-family: main-font;
+    src: url(font/ARIAL.woff);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: main-font;
+    background-color: #D3DDE8;
+    /* min-height: 600vh; */
+
+    /* overflow: hidden; */
+}
+
+a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding-block: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+}
+
+header div.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div.header-box div.logo{
+    width: 40%;
+
+}
+
+header div.header-box div.logo h1{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header div.header-box nav{
+    width: 60%;
+    
+    /* text-align: right; */
+}
+
+header div.header-box nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.header-box nav ul li a{
+    padding-inline: 1rem;
+    color: #626262;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+header div.header-box nav ul li a:hover{
+    color: #333333;
+}
+
+section.cv div.cv-box{
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* display: grid; */
+    /* gap: 20px; */
+    /* align-items: start; */
+    /* grid-auto-rows:auto; */
+    /* grid-auto-flow: dense !important; */
+     /* column-count: 3;
+    column-gap: 1rem;
+    margin-top: 100px; */
+    /* height: 600vh; */
+        /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start; */
+    /* column-count: 3;
+    column-gap: 20px;
+    padding-block: 5rem; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    /* align-items: flex-start; */
+    /* background-color: #8A9BA8; */
+    /* grid-auto-rows: min-content; */
+   
+}
+
+section.cv div.cv-box div.cv-item{
+    background-color: white;
+    border-radius: 25px;
+    padding: 1rem; 
+    /* flex: 1 1 300px; /* حداقل عرض 300px و کشش دار */
+    /* max-width: 100%;  */
+    /* height: fit-content; */
+    
+    /* margin-block: 1rem; */
+     /* background-color: white;
+    border-radius: 25px;
+    /* padding: 1rem; */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    
+    
+
+}

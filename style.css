@@ -359,9 +359,9 @@ div.main-box div.content-box {
 
 section.gallery div.gallery-box {
     column-count: 4;
-    column-gap: 2px;
+    /* column-gap: 2px; */
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
 }
 
