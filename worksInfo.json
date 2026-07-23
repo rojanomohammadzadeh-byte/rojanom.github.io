@@ -78,7 +78,9 @@
 
 
 
-  {"src":"img/gallery/swan1.jpg","title":"test","category":"swan" }
+  {"src":"img/gallery/swan1.jpg","title":"test","category":"swan" },
+  {"src":"img/gallery/swan 2.jpg","title":"test","category":"swan" }
+
 
   
 ]
