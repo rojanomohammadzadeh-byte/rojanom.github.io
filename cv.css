@@ -14,7 +14,7 @@ html {
 body {
     margin: 0;
     font-family: main-font;
-    background-color: #D3DDE8;
+    /* background-color: #D3DDE8; */
     /* min-height: 600vh; */
 
     /* overflow: hidden; */
@@ -105,9 +105,9 @@ section.cv div.cv-box {
 
 section.cv div.cv-box div.cv-item {
     background-color: white;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
     /* break-inside: avoid;
     -webkit-column-break-inside: avoid;
     
