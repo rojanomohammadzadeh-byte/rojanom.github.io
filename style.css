@@ -528,6 +528,10 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     transform: scale(1.1);
 }
 
+main div.description p{
+    color: #666666;
+    text-align: justify;
+}
 
 /* Break Points */
 

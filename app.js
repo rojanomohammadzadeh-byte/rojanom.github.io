@@ -3,6 +3,7 @@ const GalleryModule = (() => {
   // Private variables
   const baseURL = "https://cdn.jsdelivr.net/gh/rojanomohammadzadeh-byte/rojanom.github.io@main/";
   let allWorkItems = [];
+  let descriptions=[]
   let currentDisplayItems = []; // آیتم‌های در حال نمایش (فیلتر شده)
   let currentIndex = 0; // ایندکس در currentDisplayItems
   let isModalOpen = false;
@@ -18,6 +19,32 @@ const GalleryModule = (() => {
 
   // ---------- Private Methods ----------
 
+ const loadDescription = async()=>{
+  try {
+      const response = await fetch('./description.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      descriptions = await response.json();
+      return descriptions;
+    } catch (error) {
+      console.error('Error loading descriptions:', error);
+      return [];
+    }
+}
+
+// این تابع فقط توضیحِ مربوط به یک category خاص رو نمایش می‌ده
+const renderDescription = (category) => {
+  const matched = descriptions.find(d => d.category === category);
+  if (!matched) return;
+
+  const descriptionBox = document.querySelector("div.description p");
+  const titleDescriptionBox = document.querySelector("div.description h2");
+  if (descriptionBox) {
+    descriptionBox.textContent = matched.description;
+    titleDescriptionBox.textContent = matched.category;
+
+  }
+}
+ 
   const loadData = async () => {
     try {
       const response = await fetch('./worksInfo.json');
@@ -29,6 +56,8 @@ const GalleryModule = (() => {
       return [];
     }
   };
+
+
 
   // استخراج دسته‌بندی‌ها از JSON
   const extractCategories = (items) => {
@@ -145,33 +174,36 @@ const GalleryModule = (() => {
 
   // رویداد کلیک روی دسته‌بندی
   const handleCategoryClick = (e) => {
-    const categoryItem = e.target.closest('li');
-    if (!categoryItem) return;
+  const categoryItem = e.target.closest('li');
+  if (!categoryItem) return;
 
-    const category = categoryItem.dataset.category;
-    if (!category) return;
+  const category = categoryItem.dataset.category;
+  if (!category) return;
 
-    // بروزرسانی کلاس فعال
-    document.querySelectorAll('.drop-down ul li').forEach(li => {
-      li.classList.remove('active-category');
-    });
-    categoryItem.classList.add('active-category');
+  // بروزرسانی کلاس فعال
+  document.querySelectorAll('.drop-down ul li').forEach(li => {
+    li.classList.remove('active-category');
+  });
+  categoryItem.classList.add('active-category');
 
-    // فیلتر و رندر
-    const filtered = filterItems(category);
-    renderGallery(filtered);
+  // فیلتر و رندر گالری
+  const filtered = filterItems(category);
+  renderGallery(filtered);
 
-    // بستن منو
-    const dropDownKey = document.querySelector("header nav ul li.drop-down");
-    if (dropDownKey) {
-      dropDownKey.setAttribute("data-check", "0");
-      const dropDown = document.querySelector("header nav ul li.drop-down ul");
-      if (dropDown) {
-        dropDown.style.height = "0";
-        dropDown.style.display = "none";
-      }
+  // بستن منو
+  const dropDownKey = document.querySelector("header nav ul li.drop-down");
+  if (dropDownKey) {
+    dropDownKey.setAttribute("data-check", "0");
+    const dropDown = document.querySelector("header nav ul li.drop-down ul");
+    if (dropDown) {
+      dropDown.style.height = "0";
+      dropDown.style.display = "none";
     }
-  };
+  }
+
+  // 👇 حالا category رو پاس می‌دیم، نه اینکه بدون آرگومان صداش بزنیم
+  renderDescription(category);
+};
 
   // تنظیم رویدادهای مودال
   const setupModalEvents = () => {
@@ -213,35 +245,44 @@ const GalleryModule = (() => {
   // ---------- Public Methods ----------
 
   const init = async () => {
-    const items = await loadData();
-    if (items.length === 0) {
-      console.warn('No items loaded from JSON');
-      return;
+  const items = await loadData();
+  if (items.length === 0) {
+    console.warn('No items loaded from JSON');
+    return;
+  }
+
+  const categories = extractCategories(items);
+  buildCategoryButtons(categories);
+
+  if (categoryBox) {
+    categoryBox.removeEventListener('click', handleCategoryClick);
+    categoryBox.addEventListener('click', handleCategoryClick);
+  }
+
+  // رندر اولیه
+  const initialCategory = "bazm";
+  const filteredItems = filterItems(initialCategory);
+  renderGallery(filteredItems);
+
+  document.querySelectorAll('.drop-down ul li').forEach(li => {
+    li.classList.remove('active-category');
+    if (li.dataset.category === initialCategory) {
+      li.classList.add('active-category');
     }
+  });
 
-    const categories = extractCategories(items);
-    buildCategoryButtons(categories);
+  setupModalEvents();
 
-    if (categoryBox) {
-      categoryBox.removeEventListener('click', handleCategoryClick);
-      categoryBox.addEventListener('click', handleCategoryClick);
-    }
+  // 👇 بدون const — از متغیر ماژول (بیرونی) استفاده می‌کنه، نه یه متغیر لوکال جدید
+  descriptions = await loadDescription();
+  if (descriptions.length === 0) {
+    console.warn('No descriptions loaded from JSON');
+    return;
+  }
 
-    // رندر اولیه
-    const initialCategory = "bazm";
-    const filteredItems = filterItems(initialCategory);
-    renderGallery(filteredItems);
-
-    document.querySelectorAll('.drop-down ul li').forEach(li => {
-      li.classList.remove('active-category');
-      if (li.dataset.category === initialCategory) {
-        li.classList.add('active-category');
-      }
-    });
-
-
-    setupModalEvents();
-  };
+  // 👇 نمایش description مربوط به دسته‌ی پیش‌فرض فعال
+  renderDescription(initialCategory);
+};
 
   // ---------- Return Public API ----------
   return {
