@@ -359,6 +359,7 @@ div.main-box div.content-box {
 
 section.gallery div.gallery-box {
     column-count: 4;
+    column-gap: 2px;
     /* column-gap: 2px; */
 
     /* margin: 0 auto; */
@@ -538,6 +539,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
     section.gallery div.gallery-box {
         /* grid-template-columns: 1fr 1fr 1fr !important; */
+        column-gap: 2px !important;
 
 
     }
@@ -617,6 +619,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
     section.gallery div.gallery-box {
         column-count: 3 !important;
+        column-gap: 2px !important;
     }
     section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
         padding: 1rem !important;
@@ -637,6 +640,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     }
     section.gallery div.gallery-box {
         column-count: 2 !important;
+        column-gap: 2px !important;
     }
 
 
@@ -662,6 +666,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
     section.gallery div.gallery-box {
         column-count: 2 !important;
+        column-gap: 2px !important;
     }
     header nav ul li a{
         font-size: 12px !important;
