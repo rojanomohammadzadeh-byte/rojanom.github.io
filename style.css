@@ -38,6 +38,7 @@ ul{
 
 div.body-box{
     margin-top: 0rem;
+    
 }
 
 div.body-box div.content-box{
@@ -45,6 +46,7 @@ div.body-box div.content-box{
     align-items: flex-start;
     justify-content: space-between;
     gap: 8rem;
+     animation: fade-in 0.7s ease-out both;
 }
 
 div.body-box div.content-box main{
@@ -191,6 +193,7 @@ div.main-box {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    animation: fade-in 0.7s ease-out both;
 
 }
 
@@ -405,17 +408,20 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
 
 }
 
+
+
 /*  Modal style */
 
-section.gallery div#gallery-item-modal {
+
+ div#gallery-item-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     right: 0;
     margin: auto;
-    height: 100%;
     min-height: 100%;
+    height: auto;
     overflow-y: auto;
     z-index: 99;
     background: white;
@@ -528,10 +534,22 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
     transform: scale(1.1);
 }
 
-main div.description p{
+div.description{
+    display: block;
+}
+
+div.description p{
     color: #666666;
     text-align: justify;
+    
+
 }
+
+div.description.mobile-description{
+    display: none;
+}
+
+
 
 /* Break Points */
 
@@ -608,6 +626,14 @@ main div.description p{
     header{
         width: 40% !important;
     }
+    div.description.mobile-description{
+        display: block !important;
+    }
+
+    div.description{
+        display: none !important;
+    }
+
 
 
 
@@ -645,6 +671,10 @@ main div.description p{
     section.gallery div.gallery-box {
         column-count: 2 !important;
         column-gap: 2px !important;
+    }
+
+    div#gallery-item-modal{
+        padding-inline: 0 !important;
     }
 
 
@@ -731,4 +761,15 @@ main div.description p{
 
     }
 
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

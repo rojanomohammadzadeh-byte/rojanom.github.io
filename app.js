@@ -3,7 +3,7 @@ const GalleryModule = (() => {
   // Private variables
   const baseURL = "https://cdn.jsdelivr.net/gh/rojanomohammadzadeh-byte/rojanom.github.io@main/";
   let allWorkItems = [];
-  let descriptions=[]
+  let descriptions = []
   let currentDisplayItems = []; // آیتم‌های در حال نمایش (فیلتر شده)
   let currentIndex = 0; // ایندکس در currentDisplayItems
   let isModalOpen = false;
@@ -19,8 +19,8 @@ const GalleryModule = (() => {
 
   // ---------- Private Methods ----------
 
- const loadDescription = async()=>{
-  try {
+  const loadDescription = async () => {
+    try {
       const response = await fetch('./description.json');
       if (!response.ok) throw new Error('Network response was not ok');
       descriptions = await response.json();
@@ -29,22 +29,29 @@ const GalleryModule = (() => {
       console.error('Error loading descriptions:', error);
       return [];
     }
-}
-
-// این تابع فقط توضیحِ مربوط به یک category خاص رو نمایش می‌ده
-const renderDescription = (category) => {
-  const matched = descriptions.find(d => d.category === category);
-  if (!matched) return;
-
-  const descriptionBox = document.querySelector("div.description p");
-  const titleDescriptionBox = document.querySelector("div.description h2");
-  if (descriptionBox) {
-    descriptionBox.textContent = matched.description;
-    titleDescriptionBox.textContent = matched.category;
-
   }
-}
- 
+
+  // این تابع فقط توضیحِ مربوط به یک category خاص رو نمایش می‌ده
+  const renderDescription = (category) => {
+    const matched = descriptions.find(d => d.category === category);
+    if (!matched) return;
+
+    const descriptionBox = document.querySelectorAll("div.description p");
+    const titleDescriptionBox = document.querySelectorAll("div.description h2");
+    if (descriptionBox && titleDescriptionBox) {
+
+      for (const element of descriptionBox) {
+        element.textContent = matched.description;
+      }
+
+      for (const element of titleDescriptionBox) {
+
+        element.textContent = matched.category;
+      }
+
+    }
+  }
+
   const loadData = async () => {
     try {
       const response = await fetch('./worksInfo.json');
@@ -139,6 +146,15 @@ const renderDescription = (category) => {
     if (!item) return;
 
     galleryModal.style.display = "block";
+
+    
+      document.querySelector("div.mobile-description").style.setProperty("display", "none", "important");
+    
+    document.querySelector("div.header-box").style.display="none"
+
+    // document.querySelector("div.header-box").style.setProperty("display", "none", "important");
+
+
     isModalOpen = true;
 
     modalContainer.innerHTML = `
@@ -151,6 +167,11 @@ const renderDescription = (category) => {
   const closeModal = () => {
     if (!galleryModal) return;
     galleryModal.style.display = "none";
+    if(window.innerWidth<=992){
+      // document.querySelector("div.mobile-description").style.setProperty("display", "block", "important");
+      document.querySelector("div.mobile-description").style.display="block"
+    }
+    document.querySelector("div.header-box").style.display="flex"
     isModalOpen = false;
   };
 
@@ -174,36 +195,36 @@ const renderDescription = (category) => {
 
   // رویداد کلیک روی دسته‌بندی
   const handleCategoryClick = (e) => {
-  const categoryItem = e.target.closest('li');
-  if (!categoryItem) return;
+    const categoryItem = e.target.closest('li');
+    if (!categoryItem) return;
 
-  const category = categoryItem.dataset.category;
-  if (!category) return;
+    const category = categoryItem.dataset.category;
+    if (!category) return;
 
-  // بروزرسانی کلاس فعال
-  document.querySelectorAll('.drop-down ul li').forEach(li => {
-    li.classList.remove('active-category');
-  });
-  categoryItem.classList.add('active-category');
+    // بروزرسانی کلاس فعال
+    document.querySelectorAll('.drop-down ul li').forEach(li => {
+      li.classList.remove('active-category');
+    });
+    categoryItem.classList.add('active-category');
 
-  // فیلتر و رندر گالری
-  const filtered = filterItems(category);
-  renderGallery(filtered);
+    // فیلتر و رندر گالری
+    const filtered = filterItems(category);
+    renderGallery(filtered);
 
-  // بستن منو
-  const dropDownKey = document.querySelector("header nav ul li.drop-down");
-  if (dropDownKey) {
-    dropDownKey.setAttribute("data-check", "0");
-    const dropDown = document.querySelector("header nav ul li.drop-down ul");
-    if (dropDown) {
-      dropDown.style.height = "0";
-      dropDown.style.display = "none";
+    // بستن منو
+    const dropDownKey = document.querySelector("header nav ul li.drop-down");
+    if (dropDownKey) {
+      dropDownKey.setAttribute("data-check", "0");
+      const dropDown = document.querySelector("header nav ul li.drop-down ul");
+      if (dropDown) {
+        dropDown.style.height = "0";
+        dropDown.style.display = "none";
+      }
     }
-  }
 
-  // 👇 حالا category رو پاس می‌دیم، نه اینکه بدون آرگومان صداش بزنیم
-  renderDescription(category);
-};
+    // 👇 حالا category رو پاس می‌دیم، نه اینکه بدون آرگومان صداش بزنیم
+    renderDescription(category);
+  };
 
   // تنظیم رویدادهای مودال
   const setupModalEvents = () => {
@@ -245,44 +266,44 @@ const renderDescription = (category) => {
   // ---------- Public Methods ----------
 
   const init = async () => {
-  const items = await loadData();
-  if (items.length === 0) {
-    console.warn('No items loaded from JSON');
-    return;
-  }
-
-  const categories = extractCategories(items);
-  buildCategoryButtons(categories);
-
-  if (categoryBox) {
-    categoryBox.removeEventListener('click', handleCategoryClick);
-    categoryBox.addEventListener('click', handleCategoryClick);
-  }
-
-  // رندر اولیه
-  const initialCategory = "bazm";
-  const filteredItems = filterItems(initialCategory);
-  renderGallery(filteredItems);
-
-  document.querySelectorAll('.drop-down ul li').forEach(li => {
-    li.classList.remove('active-category');
-    if (li.dataset.category === initialCategory) {
-      li.classList.add('active-category');
+    const items = await loadData();
+    if (items.length === 0) {
+      console.warn('No items loaded from JSON');
+      return;
     }
-  });
 
-  setupModalEvents();
+    const categories = extractCategories(items);
+    buildCategoryButtons(categories);
 
-  // 👇 بدون const — از متغیر ماژول (بیرونی) استفاده می‌کنه، نه یه متغیر لوکال جدید
-  descriptions = await loadDescription();
-  if (descriptions.length === 0) {
-    console.warn('No descriptions loaded from JSON');
-    return;
-  }
+    if (categoryBox) {
+      categoryBox.removeEventListener('click', handleCategoryClick);
+      categoryBox.addEventListener('click', handleCategoryClick);
+    }
 
-  // 👇 نمایش description مربوط به دسته‌ی پیش‌فرض فعال
-  renderDescription(initialCategory);
-};
+    // رندر اولیه
+    const initialCategory = "bazm";
+    const filteredItems = filterItems(initialCategory);
+    renderGallery(filteredItems);
+
+    document.querySelectorAll('.drop-down ul li').forEach(li => {
+      li.classList.remove('active-category');
+      if (li.dataset.category === initialCategory) {
+        li.classList.add('active-category');
+      }
+    });
+
+    setupModalEvents();
+
+    // 👇 بدون const — از متغیر ماژول (بیرونی) استفاده می‌کنه، نه یه متغیر لوکال جدید
+    descriptions = await loadDescription();
+    if (descriptions.length === 0) {
+      console.warn('No descriptions loaded from JSON');
+      return;
+    }
+
+    // 👇 نمایش description مربوط به دسته‌ی پیش‌فرض فعال
+    renderDescription(initialCategory);
+  };
 
   // ---------- Return Public API ----------
   return {
@@ -378,3 +399,81 @@ document.addEventListener('DOMContentLoaded', () => {
   SocialModule.init();
   DropdownModule.init();
 });
+
+
+
+// CV Page JS
+
+let mobileMenuButton = document.querySelector("div.mobile-header-box div.logo-and-button img")
+let mobileNav = document.querySelector("div.mobile-header-box nav")
+let cvSection = document.querySelector("section.cv")
+let artistStatement = document.querySelector("section.main-content")
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener("click", function () {
+    if (mobileMenuButton.dataset.flag == 0 || !mobileMenuButton.dataset.flag) {
+      mobileNav.style.right = "0"
+      if (cvSection) {
+        cvSection.style.filter = "blur(5px)"
+      }
+      else {
+        document.querySelector("section.main-content").style.filter = "blur(5px)"
+      }
+      mobileMenuButton.setAttribute("src", "img/other Imgages/close.png")
+      if (cvSection) {
+        document.querySelector("section.cv div.cv-box").style.pointerEvents = "none"
+      }
+      mobileMenuButton.dataset.flag = 1
+    }
+    else {
+      mobileNav.style.right = "-100%"
+      if (cvSection) {
+        cvSection.style.filter = "blur(0px)"
+      }
+      else {
+        artistStatement.style.filter = "blur(0px)"
+      }
+      mobileMenuButton.setAttribute("src", "img/other Imgages/burger-bar.png")
+      if (cvSection) {
+        document.querySelector("section.cv div.cv-box").style.pointerEvents = "all"
+      }
+
+      mobileMenuButton.dataset.flag = 0
+    }
+
+  })
+}
+
+if (cvSection) {
+  cvSection.addEventListener("click", function () {
+    mobileNav.style.right = "-100%"
+    cvSection.style.filter = "blur(0px)"
+    mobileMenuButton.setAttribute("src", "img/other Imgages/burger-bar.png")
+    // document.querySelector("section.cv div.cv-box").style.pointerEvents="all"
+    mobileMenuButton.dataset.flag = 0
+
+  })
+}
+if (artistStatement) {
+  artistStatement.addEventListener("click", function () {
+    mobileNav.style.right = "-100%"
+    artistStatement.style.filter = "blur(0px)"
+    mobileMenuButton.setAttribute("src", "img/other Imgages/burger-bar.png")
+    // document.querySelector("section.cv div.cv-box").style.pointerEvents="all"
+    mobileMenuButton.dataset.flag = 0
+
+  })
+}
+
+
+
+
+
+let h1s = document.querySelectorAll("header h1")
+
+if (h1s) {
+  for (const h1 of h1s) {
+    h1.addEventListener("click", function () {
+      window.location.href = "index.html"
+    })
+  }
+}

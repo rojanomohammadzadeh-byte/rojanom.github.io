@@ -18,7 +18,6 @@ body {
     /* min-height: 600vh; */
 
     /* overflow: hidden; */
-   
 }
 
 a {
@@ -191,44 +190,89 @@ div.mobile-header-box nav ul li.active a::after{
     left: 0 !important;
 }
 
-/* div.mobile-header-box nav ul li.active:hover a::after{
-    width: 0 !important;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
 
-/* 
-section.cv{
-
-    filter: blur(3px);
-} */
-
-/* ------------------ */
-section.cv{
-    transition: 0.5s;
-     animation: fade-in 0.7s ease-out both;
+section.main-content {
+    position: relative;
+    padding-block: 6rem 8rem;
+    overflow: hidden;
 }
 
-section.cv div.cv-box {
- 
-    margin-block: 3rem;
-
+.statement-box {
+    /* max-width: 640px; */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    animation: statement-in 0.7s ease-out both;
 }
 
-section.cv div.cv-box div.cv-item {
-    background-color: white;
-    padding-block: 1rem;
-    margin-bottom: 1rem;
-
+.statement-seal {
+    position: absolute;
+    top: -1.5rem;
+    right: -0.5rem;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(30, 58, 95, 0.35);
+    border-radius: 50%;
+    transform: rotate(-8deg);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: rgba(30, 58, 95, 0.45);
+    user-select: none;
 }
 
-
-section.cv div.cv-box div.cv-item p {
-    color: #666666;
+.statement-eyebrow {
+    margin: 0 0 1.75rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #626262;
 }
 
-section.cv div.cv-box div.cv-item b{
-    color: black !important;
+.statement-lead {
+    margin: 0 0 2.75rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid #1e3a5f;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.55;
+    color: #16233d;
 }
 
+.statement-body p {
+    margin: 0 0 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333333;
+}
+
+.statement-body p:first-of-type::first-letter {
+    float: left;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.4rem;
+    font-weight: 600;
+    line-height: 0.75;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    color: #1e3a5f;
+}
+
+.statement-signature {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #626262;
+}
 
 @media screen and (max-width:768px) {
     header div.header-box{
@@ -250,7 +294,8 @@ section.cv div.cv-box div.cv-item b{
 }
 
 
-@keyframes fade-in {
+
+@keyframes statement-in {
     from {
         opacity: 0;
         transform: translateY(12px);
@@ -258,5 +303,33 @@ section.cv div.cv-box div.cv-item b{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .statement-box {
+        animation: none;
+    }
+}
+
+@media (max-width: 768px) {
+    section.main-content {
+        padding-block: 4rem 5rem;
+    }
+
+    .statement-seal {
+        width: 64px;
+        height: 64px;
+        top: -1rem;
+        right: 0;
+        font-size: 0.85rem;
+    }
+
+    .statement-lead {
+        font-size: 1.35rem;
+    }
+
+    .statement-body p {
+        font-size: 1rem;
     }
 }
