@@ -31,6 +31,7 @@ ul{
 
 
 
+
 .container {
     width: 90%;
     margin: auto;
@@ -434,7 +435,7 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
 
 }
 
-section.gallery div#gallery-item-modal div.modal-name-and-button {
+div#gallery-item-modal div.modal-name-and-button {
 
     padding-block: 1.5rem;
     /* margin-bottom: 10px !important; */
@@ -443,14 +444,14 @@ section.gallery div#gallery-item-modal div.modal-name-and-button {
     margin: auto;
 }
 
-section.gallery div#gallery-item-modal div.modal-name-and-button span.name {
+div#gallery-item-modal div.modal-name-and-button span.name {
     font-size: 16px;
     color: #111111;
     font-weight: 400;
     text-align: center;
 }
 
-section.gallery div#gallery-item-modal div.modal-name-and-button div.modal-name-and-button-box {
+div#gallery-item-modal div.modal-name-and-button div.modal-name-and-button-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -462,11 +463,11 @@ section.gallery div#gallery-item-modal div.modal-name-and-button div.modal-name-
     /* background-color: white; */
 }
 
-section.gallery div#gallery-item-modal div.modal-name-and-button div.close-button {
+div#gallery-item-modal div.modal-name-and-button div.close-button {
     cursor: pointer;
 }
 
-section.gallery div#gallery-item-modal div.modal-content {
+div#gallery-item-modal div.modal-content {
     /* padding-block: 1rem; */
     position: fixed;
     top: 50%;
@@ -476,13 +477,13 @@ section.gallery div#gallery-item-modal div.modal-content {
     transform: translateY(-50%);
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box {
+div#gallery-item-modal div.modal-content-box {
     max-width: 90%;
     margin: auto;
     /* padding-block: 1rem; */
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
+div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
     width: 86%;
     margin: auto;
     display: flex;
@@ -491,13 +492,13 @@ section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-i
     flex-direction: column;
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
+div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
     max-width: 100%;
     /* aspect-ratio: 1.69 */
     max-height: 70vh !important;
 }
 
-section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info span.work-title {
+div#gallery-item-modal div.modal-content-box div.modal-img-and-info span.work-title {
     color: gray;
     font-weight: 900;
     display: block;
@@ -507,7 +508,7 @@ section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-i
 
 }
 
-section.gallery div#gallery-item-modal div.modal-content div.prev-next {
+div#gallery-item-modal div.modal-content div.prev-next {
     width: 97%;
     position: fixed;
     left: 0;
@@ -520,7 +521,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next {
     transform: translateY(-50%);
 }
 
-section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev, img.next {
+div#gallery-item-modal div.modal-content div.prev-next img.prev, img.next {
     cursor: pointer;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     transition: 0.5s;
@@ -530,7 +531,7 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev,
 }
 
 
-section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:hover, img.next:hover {
+div#gallery-item-modal div.modal-content div.prev-next img.prev:hover, img.next:hover {
 
     transform: scale(1.1);
 }
@@ -558,10 +559,7 @@ div.description.mobile-description{
 
 
 @media screen and (max-width: 1400px) {
-    section.gallery div#gallery-item-modal div.modal-content-box {
-        /* width: 70% !important; */
-    }
-
+   
     section.gallery div.gallery-box {
         /* grid-template-columns: 1fr 1fr 1fr !important; */
         column-gap: 2px !important;
@@ -574,15 +572,7 @@ div.description.mobile-description{
 }
 
 @media screen and (max-width: 1200px) {
-    section.gallery div#gallery-item-modal div.modal-content-box {
-        /* width: 80% !important; */
-    }
-
-    section.gallery div.gallery-box {
-        /* grid-template-columns: 1fr 1fr 1fr !important; */
-
-
-    }
+ 
     div.body-box div.content-box{
         gap: 5rem !important;
     }
@@ -597,12 +587,12 @@ div.description.mobile-description{
 
 @media screen and (max-width: 992px) {
 
-    section.gallery div#gallery-item-modal div.modal-content {
+    div#gallery-item-modal div.modal-content {
         position: static;
         transform: translateY(0);
     }
 
-    section.gallery div#gallery-item-modal div.modal-content-box {
+    div#gallery-item-modal div.modal-content-box {
         max-width: 100%;
         display: flex !important;
         align-items: center !important;
@@ -610,7 +600,7 @@ div.description.mobile-description{
         flex-direction: column-reverse !important;
     }
 
-    section.gallery div#gallery-item-modal div.modal-content div.prev-next {
+    div#gallery-item-modal div.modal-content div.prev-next {
         position: static;
         transform: translateY(0);
         display: flex;
@@ -644,13 +634,13 @@ div.description.mobile-description{
 
 
 
-    section.gallery div#gallery-item-modal div.modal-name-and-button {
+    div#gallery-item-modal div.modal-name-and-button {
         width: 100% !important;
     }
 
 
 
-    section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
+    div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
         width: 100%;
     }
 
@@ -737,7 +727,7 @@ div.description.mobile-description{
 
 @media screen and (max-width: 430px) {
 
-    section.gallery div#gallery-item-modal {
+    div#gallery-item-modal {
         padding-inline: 1rem;
     }
      div.body-box div.content-box{
@@ -761,7 +751,7 @@ div.description.mobile-description{
         margin: auto;
     }
 
-    section.gallery div#gallery-item-modal div.modal-content-box {
+    div#gallery-item-modal div.modal-content-box {
         width: 100% !important;
     }
      div.body-box div.content-box {

@@ -12,10 +12,10 @@ const GalleryModule = (() => {
   const galleryContainer = document.querySelector('.gallery-box');
   const categoryBox = document.querySelector(".drop-down ul");
   const galleryModal = document.getElementById("gallery-item-modal");
-  const modalContainer = document.querySelector("section.gallery div#gallery-item-modal div.modal-content-box div.modal-img-and-info");
-  const closeButton = document.querySelector("section.gallery div#gallery-item-modal div.modal-name-and-button div.close-button");
-  const prevButton = document.querySelector("section.gallery div#gallery-item-modal div.modal-content div.prev-next .prev");
-  const nextButton = document.querySelector("section.gallery div#gallery-item-modal div.modal-content div.prev-next .next");
+  const modalContainer = document.querySelector("div#gallery-item-modal div.modal-content-box div.modal-img-and-info");
+  const closeButton = document.querySelector("div#gallery-item-modal div.modal-name-and-button div.close-button");
+  const prevButton = document.querySelector("div#gallery-item-modal div.modal-content div.prev-next .prev");
+  const nextButton = document.querySelector("div#gallery-item-modal div.modal-content div.prev-next .next");
 
   // ---------- Private Methods ----------
 
@@ -150,9 +150,7 @@ const GalleryModule = (() => {
     
       document.querySelector("div.mobile-description").style.setProperty("display", "none", "important");
     
-    document.querySelector("div.header-box").style.display="none"
-
-    // document.querySelector("div.header-box").style.setProperty("display", "none", "important");
+    
 
 
     isModalOpen = true;
@@ -171,7 +169,7 @@ const GalleryModule = (() => {
       // document.querySelector("div.mobile-description").style.setProperty("display", "block", "important");
       document.querySelector("div.mobile-description").style.display="block"
     }
-    document.querySelector("div.header-box").style.display="flex"
+    
     isModalOpen = false;
   };
 
