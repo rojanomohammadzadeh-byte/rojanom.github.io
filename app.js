@@ -448,7 +448,7 @@ if (cvSection) {
     mobileNav.style.right = "-100%"
     cvSection.style.filter = "blur(0px)"
     mobileMenuButton.setAttribute("src", "img/other Imgages/burger-bar.png")
-    // document.querySelector("section.cv div.cv-box").style.pointerEvents="all"
+    document.querySelector("section.cv div.cv-box").style.pointerEvents="all"
     mobileMenuButton.dataset.flag = 0
 
   })

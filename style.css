@@ -372,6 +372,7 @@ section.gallery div.gallery-box {
 section.gallery div.gallery-box div.gallery-item {
     position: relative;
     cursor: pointer;
+    animation: fade-in 0.7s ease-out both;
 }
 
 section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
@@ -536,11 +537,13 @@ section.gallery div#gallery-item-modal div.modal-content div.prev-next img.prev:
 
 div.description{
     display: block;
+    animation: fade-in 0.7s ease-out both;
 }
 
 div.description p{
     color: #666666;
     text-align: justify;
+    line-height: 1.5rem;
     
 
 }
@@ -633,6 +636,10 @@ div.description.mobile-description{
     div.description{
         display: none !important;
     }
+    div.description p{
+        /* font-size: 13px !important; */
+        line-height: 1.5rem !important;
+    }
 
 
 
@@ -706,11 +713,18 @@ div.description.mobile-description{
         font-size: 12px !important;
     }
     header nav ul li{
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
     section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
 
         font-size: 11px !important;
+    }
+    div.description.mobile-description p{
+        font-size: 14px !important;
+        line-height: 1.5rem !important;
+    }
+    div.description.mobile-description h2{
+        font-size: 1rem !important;
     }
 
     
@@ -722,12 +736,6 @@ div.description.mobile-description{
 
 
 @media screen and (max-width: 430px) {
-
-    section.gallery div.gallery-box {
-        /* grid-template-columns: 1fr !important; */
-
-
-    }
 
     section.gallery div#gallery-item-modal {
         padding-inline: 1rem;
@@ -741,6 +749,9 @@ div.description.mobile-description{
     section.gallery div.gallery-box div.gallery-item div.gallery-item-title{
         padding: 0.2rem;
     }
+    header nav ul li.drop-down ul{
+        padding-left: 1rem !important;
+    }
 
 }
 
@@ -753,13 +764,10 @@ div.description.mobile-description{
     section.gallery div#gallery-item-modal div.modal-content-box {
         width: 100% !important;
     }
+     div.body-box div.content-box {
+    gap: 0.5rem !important;
+  }
 
-    section.gallery div.gallery-box {
-
-        /* grid-template-columns: 1fr !important; */
-
-
-    }
 
 }
 

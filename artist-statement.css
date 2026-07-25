@@ -196,6 +196,7 @@ section.main-content {
     position: relative;
     padding-block: 6rem 8rem;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .statement-box {
