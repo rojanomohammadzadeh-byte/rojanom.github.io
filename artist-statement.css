@@ -255,7 +255,7 @@ section.main-content {
     color: #333333;
 }
 
-.statement-body p:first-of-type::first-letter {
+/* .statement-body p:first-of-type::first-letter {
     float: left;
     font-family: "Cormorant Garamond", serif;
     font-size: 3.4rem;
@@ -264,7 +264,7 @@ section.main-content {
     padding-right: 0.5rem;
     padding-top: 0.3rem;
     color: #1e3a5f;
-}
+} */
 
 .statement-signature {
     margin-top: 3rem;
