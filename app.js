@@ -279,7 +279,7 @@ const GalleryModule = (() => {
     }
 
     // رندر اولیه
-    const initialCategory = "bazm";
+    const initialCategory = "counting as survival";
     const filteredItems = filterItems(initialCategory);
     renderGallery(filteredItems);
 
