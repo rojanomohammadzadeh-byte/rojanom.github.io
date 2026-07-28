@@ -374,6 +374,7 @@ section.gallery div.gallery-box div.gallery-item {
     position: relative;
     cursor: pointer;
     animation: fade-in 0.7s ease-out both;
+    margin-bottom: 2px;
 }
 
 section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
@@ -383,6 +384,7 @@ section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
 
 section.gallery div.gallery-box div.gallery-item img {
     width: 100%;
+    display: block;
 
 
 
