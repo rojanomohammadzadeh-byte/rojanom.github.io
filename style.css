@@ -14,8 +14,6 @@ html {
 body {
     margin: 0;
     font-family: main-font;
-
-    /* overflow: hidden; */
 }
 
 a {
@@ -77,10 +75,7 @@ header nav ul li.drop-down ul li{
     color: #626262;
     padding-block: 0.8rem;
     width: 100%;
-    /* transition: 0.5s; */
     font-size: 14px;
-    /* margin-block: 1rem; */
-    /* transition: 0.5s; */
     position: relative;
 }
 
@@ -95,11 +90,6 @@ header nav ul li.drop-down ul li::after{
     transition: 0.5s;
 }
 
-/* 
-header nav ul li {
-    width: 100%;
-    height: 100%;
-} */
 
 @media(hover: hover){
     header nav ul li.drop-down ul li:hover::after{
@@ -113,10 +103,7 @@ header nav ul li a{
     color: #626262;
     padding-block: 1rem;
     width: 100%;
-    /* transition: 0.5s; */
     font-size: 14px;
-    /* margin-block: 1rem; */
-    /* transition: 0.5s; */
     position: relative;
 }
 
@@ -147,10 +134,6 @@ header nav ul li a:hover::after{
 
 header nav ul li.drop-down ul{
     padding-left: 1.5rem;
-    /* height: 0px; */
-    /* transform: rotateX(90deg); */
-    /* transition: 0.5s; */
-    /* visibility: hidden; */
     margin-top: 1rem;
     
 }
@@ -205,14 +188,6 @@ div.main-box div.slideshow {
 
 }
 
-/* 
-div.main-box div.slideshow img{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-} */
 div.main-box div.slideshow div.slideshow-img {
     width: 100%;
     height: 100vh;
@@ -224,8 +199,6 @@ div.main-box div.slideshow div.slideshow-img {
     background-position: center;
     transition: 0.5s;
     opacity: 0;
-    /* margin: auto; */
-
 
 }
 
@@ -282,8 +255,6 @@ div.main-box div.content-box div.name-and-button a {
     border: 1px solid #ffffff;
     transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
-    /* backdrop-filter: blur(20px); */
     text-shadow: 2px 2px 2px #181818;
 
 }
@@ -291,7 +262,6 @@ div.main-box div.content-box div.name-and-button a {
 
 div.main-box div.content-box div.name-and-button a:hover {
     color: #181818;
-    /* border-color: #181818; */
     background-color: #ffffff;
     text-shadow: none;
 }
@@ -318,8 +288,6 @@ div.main-box div.content-box div.social-media svg g {
 
 div.main-box div.content-box div.social-media svg:hover g {
     fill: #E1306C;
-    /* color: pink; */
-    /* stroke: red; */
 }
 
 @keyframes zoom {
@@ -357,9 +325,7 @@ div.header-box h1 {
 }
 
 
-div.main-box div.content-box {
-    /* padding-block: 2rem; */
-}
+
 
 section.gallery div.gallery-box {
     column-count: 4;
@@ -374,6 +340,7 @@ section.gallery div.gallery-box div.gallery-item {
     position: relative;
     cursor: pointer;
     animation: fade-in 0.7s ease-out both;
+    margin-bottom: 2px;
 }
 
 section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
@@ -383,6 +350,7 @@ section.gallery div.gallery-box div.gallery-item:hover div.gallery-item-title {
 
 section.gallery div.gallery-box div.gallery-item img {
     width: 100%;
+    display: block;
 
 
 
@@ -429,7 +397,6 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
     background: white;
     padding-inline: 2rem;
     display: none;
-    /* display: contents !important; */
 
 
 
@@ -438,8 +405,6 @@ section.gallery div.gallery-box div.gallery-item div.gallery-item-title {
 div#gallery-item-modal div.modal-name-and-button {
 
     padding-block: 1.5rem;
-    /* margin-bottom: 10px !important; */
-    /* margin-top: 1.5rem; */
     width: 90% !important;
     margin: auto;
 }
@@ -459,8 +424,6 @@ div#gallery-item-modal div.modal-name-and-button div.modal-name-and-button-box {
     position: sticky;
     top: 1rem;
     width: 100%;
-
-    /* background-color: white; */
 }
 
 div#gallery-item-modal div.modal-name-and-button div.close-button {
@@ -468,7 +431,7 @@ div#gallery-item-modal div.modal-name-and-button div.close-button {
 }
 
 div#gallery-item-modal div.modal-content {
-    /* padding-block: 1rem; */
+    
     position: fixed;
     top: 50%;
     left: 50%;
@@ -480,7 +443,6 @@ div#gallery-item-modal div.modal-content {
 div#gallery-item-modal div.modal-content-box {
     max-width: 90%;
     margin: auto;
-    /* padding-block: 1rem; */
 }
 
 div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
@@ -494,7 +456,6 @@ div#gallery-item-modal div.modal-content-box div.modal-img-and-info {
 
 div#gallery-item-modal div.modal-content-box div.modal-img-and-info>img {
     max-width: 100%;
-    /* aspect-ratio: 1.69 */
     max-height: 70vh !important;
 }
 
@@ -523,10 +484,7 @@ div#gallery-item-modal div.modal-content div.prev-next {
 
 div#gallery-item-modal div.modal-content div.prev-next img.prev, img.next {
     cursor: pointer;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     transition: 0.5s;
-    /* transform: scale(0); */
-    /* position: relative; */
 
 }
 
@@ -561,7 +519,6 @@ div.description.mobile-description{
 @media screen and (max-width: 1400px) {
    
     section.gallery div.gallery-box {
-        /* grid-template-columns: 1fr 1fr 1fr !important; */
         column-gap: 2px !important;
 
 
@@ -627,7 +584,6 @@ div.description.mobile-description{
         display: none !important;
     }
     div.description p{
-        /* font-size: 13px !important; */
         line-height: 1.5rem !important;
     }
 
