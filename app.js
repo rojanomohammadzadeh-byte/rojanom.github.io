@@ -279,7 +279,7 @@ const GalleryModule = (() => {
     }
 
     // رندر اولیه
-    const initialCategory = "counting as survival";
+    const initialCategory = "growing elsewhere";
     const filteredItems = filterItems(initialCategory);
     renderGallery(filteredItems);
 
